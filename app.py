@@ -23,12 +23,7 @@ def handle_yarn_request(timestamp, subpath):
     return handle_request_with_api(yarn_api, timestamp, subpath)
 
 
-def handle_request_with_api(api, timestamp, subpath):
-    # Log the request details
-    logger.info(
-        f"Request received: timestamp={timestamp}, subpath={subpath}, method={request.method}"
-    )
-
+def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath):
     if len(subpath.split("/")) > 1:
         return redirect(f"{api.registry_url}{subpath}", code=302)
 
@@ -40,12 +35,16 @@ def handle_request_with_api(api, timestamp, subpath):
 
     # Fetch package metadata
     package_name = subpath.split("/")[0]
-    package_data = api.fetch_package_metadata(package_name)
-    if not package_data:
-        return f"Error: Unable to fetch package metadata for {subpath}", 404
+    package_response = api.fetch_package_metadata(package_name)
+    if package_response.status_code != 200:
+        return (
+            package_response.content,
+            package_response.status_code,
+            dict(package_response.headers),
+        )
 
     # Filter versions by timestamp
-    filtered_data = api.filter_versions_by_timestamp(package_data, timestamp)
+    filtered_data = api.filter_versions_by_timestamp(package_response.json(), timestamp)
 
     # Return the modified JSON response
     return filtered_data, 200, {"Content-Type": "application/json"}
