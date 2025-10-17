@@ -29,7 +29,7 @@ def handle_request_with_api(api, timestamp, subpath):
         f"Request received: timestamp={timestamp}, subpath={subpath}, method={request.method}"
     )
 
-    if subpath.startswith("-/"):
+    if len(subpath.split("/")) > 1:
         return redirect(f"{api.registry_url}{subpath}", code=302)
 
     # Convert timestamp to integer
@@ -39,7 +39,7 @@ def handle_request_with_api(api, timestamp, subpath):
         return "Invalid timestamp format", 400
 
     # Fetch package metadata
-    package_name = subpath.split("/-/")[0]
+    package_name = subpath.split("/")[0]
     package_data = api.fetch_package_metadata(package_name)
     if not package_data:
         return f"Error: Unable to fetch package metadata for {subpath}", 404

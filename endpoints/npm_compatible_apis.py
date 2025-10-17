@@ -43,12 +43,10 @@ class NpmCompatibleAPI:
         time = package_data.get("time", {})
         for version, publish_time in time.items():
             publish_time = datetime.fromisoformat(publish_time.replace("Z", "+00:00"))
-            if version == "modified":
+            if version == "modified" or version == "created":
                 continue
-            if publish_time <= target_time:
-                new_package_data["versions"][version] = package_data["versions"][
-                    version
-                ]
+            if publish_time <= target_time and version in package_data.get("versions", {}):
+                new_package_data["versions"][version] = package_data["versions"][version]
                 new_package_data["time"][version] = publish_time.isoformat()
                 if new_modified_time is None or publish_time > new_modified_time:
                     new_modified_time = publish_time
