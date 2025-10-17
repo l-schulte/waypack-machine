@@ -1,6 +1,6 @@
-# NPM Wayback Machine
+# NPM Waypack Machine
 
-A minimal Flask-based web server that allows you to fetch and redirect to specific versions of npm packages based on a given timestamp.
+A wayback machine for the package manager npm. Minimal Flask-based web server that allows you to fetch and redirect to specific versions of npm packages based on a given timestamp.
 
 ## Features
 
