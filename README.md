@@ -2,6 +2,8 @@
 
 A wayback machine for the package managers npm and Yarn. Minimal Flask-based web server that allows you to fetch and redirect to specific versions of npm and Yarn packages based on a given timestamp.
 
+> **⚠️ Disclaimer:** This project is a work in progress and may be untested. Use at your own risk.
+
 ## Features
 
 - Accepts requests at `/npm/<timestamp>/<path>` and `/yarn/<timestamp>/<path>`.
