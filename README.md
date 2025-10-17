@@ -1,16 +1,16 @@
-# NPM Waypack Machine
+# Waypack Machine
 
-A wayback machine for the package manager npm. Minimal Flask-based web server that allows you to fetch and redirect to specific versions of npm packages based on a given timestamp.
+A wayback machine for the package managers npm and Yarn. Minimal Flask-based web server that allows you to fetch and redirect to specific versions of npm and Yarn packages based on a given timestamp.
 
 ## Features
 
-- Accepts requests at `/npm/<timestamp>/<path>`.
-- Filters npm package versions available before the given timestamp.
+- Accepts requests at `/npm/<timestamp>/<path>` and `/yarn/<timestamp>/<path>`.
+- Filters npm and Yarn package versions available before the given timestamp.
 - Redirects to the closest valid version or returns modified metadata.
 
 ## Requirements
 
-- Python 3.10+
+- Python
 - Flask
 - Requests
 
@@ -37,9 +37,10 @@ A wayback machine for the package manager npm. Minimal Flask-based web server th
    ```bash
    python app.py
    ```
-2. Change the npm registry URL:
+2. Change the npm/yarn registry URL:
    ```bash
-   npm set registry http://172.17.0.1:3000/npm/<timestamp>/
+   npm set registry http://localhost:3000/npm/<timestamp>/
+   yarn config set registry http://localhost:3000/yarn/<timestamp>/
    ```
 3. Get your packages from the past! (Fails if newer versions are requested)
    ```bash

@@ -1,7 +1,7 @@
 from flask import Flask, request, redirect
 import logging
-import requests
 from datetime import datetime, timezone
+from endpoints.npm_compatible_apis import NpmCompatibleAPI
 
 app = Flask(__name__)
 
@@ -9,56 +9,46 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 logger = logging.getLogger(__name__)
 
-NPM_REGISTRY_URL = "https://registry.npmjs.org/"
+npm_api = NpmCompatibleAPI("https://registry.npmjs.org/")
+yarn_api = NpmCompatibleAPI("https://registry.yarnpkg.com/")
 
 
 @app.route("/npm/<timestamp>/<path:subpath>", methods=["GET", "POST", "PUT", "DELETE"])
-def handle_request(timestamp, subpath: str):
+def handle_npm_request(timestamp, subpath):
+    return handle_request_with_api(npm_api, timestamp, subpath)
+
+
+@app.route("/yarn/<timestamp>/<path:subpath>", methods=["GET", "POST", "PUT", "DELETE"])
+def handle_yarn_request(timestamp, subpath):
+    return handle_request_with_api(yarn_api, timestamp, subpath)
+
+
+def handle_request_with_api(api, timestamp, subpath):
     # Log the request details
-    data = request.get_data()
     logger.info(
-        f"⏯️ Request received: timestamp={timestamp}, subpath={subpath}, method={request.method}"
+        f"Request received: timestamp={timestamp}, subpath={subpath}, method={request.method}"
     )
 
-    npm_url = f"{NPM_REGISTRY_URL}{subpath}"
+    if subpath.startswith("-/"):
+        return redirect(f"{api.registry_url}{subpath}", code=302)
 
-    if not subpath.replace("/", "").isalnum():
-        logger.info(f"✅ Redirecting to npm registry for metadata files: {npm_url}")
-        return redirect(npm_url, code=302)
+    # Convert timestamp to integer
+    try:
+        timestamp = int(timestamp)
+    except ValueError:
+        return "Invalid timestamp format", 400
 
-    target_time = datetime.fromtimestamp(int(timestamp), tz=timezone.utc)
-
-    response = requests.get(npm_url)
-    if response.status_code != 200:
-        logger.error(f"❌ Failed to fetch package metadata for {subpath}")
+    # Fetch package metadata
+    package_name = subpath.split("/-/")[0]
+    package_data = api.fetch_package_metadata(package_name)
+    if not package_data:
         return f"Error: Unable to fetch package metadata for {subpath}", 404
 
-    package_data = response.json()
-
-    # Replace the JSON in the response from npm with filtered data
-    new_package_data = {"versions": {}, "time": {}}
-    new_modified_time = None  # Initialize outside the loop
-
-    time = package_data.get("time", {})
-    for version, publish_time in time.items():
-        publish_time = datetime.fromisoformat(publish_time.replace("Z", "+00:00"))
-        if version == "modified" or version == "created":
-            continue
-        if publish_time <= target_time:
-            new_package_data["versions"][version] = package_data["versions"][version]
-            new_package_data["time"][version] = publish_time.isoformat()
-            if new_modified_time is None or publish_time > new_modified_time:
-                new_modified_time = publish_time
-
-    new_package_data["time"]["modified"] = (
-        new_modified_time.isoformat() if new_modified_time else None
-    )
+    # Filter versions by timestamp
+    filtered_data = api.filter_versions_by_timestamp(package_data, timestamp)
 
     # Return the modified JSON response
-    logger.info(
-        f"✅ Returning filtered package data with {len(new_package_data['versions'])} out of {len(package_data['versions'])} versions"
-    )
-    return new_package_data, 200, {"Content-Type": "application/json"}
+    return filtered_data, 200, {"Content-Type": "application/json"}
 
 
 if __name__ == "__main__":
