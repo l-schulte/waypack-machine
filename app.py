@@ -2,6 +2,7 @@ from flask import Flask, request, redirect
 import logging
 from datetime import datetime, timezone
 from endpoints.npm_compatible_apis import NpmCompatibleAPI
+import json
 
 app = Flask(__name__)
 
@@ -11,6 +12,9 @@ logger = logging.getLogger(__name__)
 
 npm_api = NpmCompatibleAPI("https://registry.npmjs.org/")
 yarn_api = NpmCompatibleAPI("https://registry.yarnpkg.com/")
+
+requests_dict = {}
+requests_counter = 0
 
 
 @app.route("/npm/<timestamp>/<path:subpath>", methods=["GET", "POST", "PUT", "DELETE"])
@@ -22,9 +26,25 @@ def handle_npm_request(timestamp, subpath):
 def handle_yarn_request(timestamp, subpath):
     return handle_request_with_api(yarn_api, timestamp, subpath)
 
- 
+
 def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
-    if (subpath[0] == "@" and len(subpath.split("/")) > 2 or subpath[0] != "@" and len(subpath.split("/")) > 1):
+    global requests_counter
+
+    if subpath not in requests_dict:
+        requests_dict[subpath] = 0
+    requests_dict[subpath] += 1
+
+    requests_counter += 1
+    if requests_counter % 100 == 0:
+        with open("requests.json", "w") as f:
+            json.dump(requests_dict, f)
+
+    if (
+        subpath[0] == "@"
+        and len(subpath.split("/")) > 2
+        or subpath[0] != "@"
+        and len(subpath.split("/")) > 1
+    ):
         return redirect(f"{api.registry_url}{subpath}", code=302)
 
     # Convert timestamp to integer
