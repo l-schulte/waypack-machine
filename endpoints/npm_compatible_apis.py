@@ -1,9 +1,18 @@
 import requests
 from datetime import datetime, timezone
 import logging
-from packaging.version import parse as parse_version
+from packaging.version import parse, InvalidVersion, Version
 
 logger = logging.getLogger(__name__)
+
+
+def parse_version(version_string: str) -> Version:
+    """Parse version string using packaging.version.parse."""
+    try:
+        return parse(version_string)
+    except InvalidVersion as e:
+        logger.error(f"Invalid version string: {version_string}")
+        return Version("0.0.0")
 
 
 class NpmCompatibleAPI:
@@ -63,7 +72,7 @@ class NpmCompatibleAPI:
                     latest_time = publish_time
 
         time["modified"] = self.toisoformat(latest_time) if latest_time else ""
-        time["created"] = time.get("created", "")
+        time["created"] = package_data.get("time", {"created": ""}).get("created", "")
         latest = max(versions.keys(), key=parse_version, default=None)
 
         package_data["versions"] = versions
