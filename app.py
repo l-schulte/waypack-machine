@@ -14,10 +14,11 @@ logger = logging.getLogger(__name__)
 npm_api = NpmCompatibleAPI("https://registry.npmjs.org/")
 yarn_api = NpmCompatibleAPI("https://registry.yarnpkg.com/")
 
-requests_dict = {}
-requests_counter = 0
-
-redirects = json.load(open("redirects.config", "r")) if os.path.exists("redirects.config") else None
+redirects = (
+    json.load(open("redirects.config.json", "r"))
+    if os.path.exists("redirects.config.json")
+    else None
+)
 
 
 @app.route("/npm/<timestamp>/<path:subpath>", methods=["GET", "POST", "PUT", "DELETE"])
@@ -85,17 +86,6 @@ def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
     Returns:
         Flask response: Either a redirect or filtered package metadata JSON.
     """
-    global requests_counter
-
-    if subpath not in requests_dict:
-        requests_dict[subpath] = 0
-    requests_dict[subpath] += 1
-
-    requests_counter += 1
-    if requests_counter % 100 == 0:
-        with open("requests.json", "w") as f:
-            json.dump(requests_dict, f)
-
     # Redirect paths (local or external)
     if redirects and subpath in redirects.get("files", {}):
         redirect_path = redirects["files"][subpath]

@@ -61,7 +61,7 @@ A wayback machine for npm and Yarn package managers. This Flask-based web server
 
 Override package metadata requests:
 
-1. Configure `redirects.json` to replace metadata requests:
+1. Configure `redirects.config` to replace metadata requests:
    ```json
    {
      "versions": {
@@ -89,7 +89,7 @@ Override package metadata requests:
 Override package tarball requests with local files:
 
 1. Put files in `local_packages/` directory.
-2. Configure `redirects.json`:
+2. Configure `redirects.config`:
    ```json
    {
      "files": {
