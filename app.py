@@ -86,6 +86,7 @@ def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
     Returns:
         Flask response: Either a redirect or filtered package metadata JSON.
     """
+
     # Redirect paths (local or external)
     if redirects and subpath in redirects.get("files", {}):
         redirect_path = redirects["files"][subpath]
@@ -93,7 +94,7 @@ def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
         if redirect_path.startswith("http"):
             return redirect(redirect_path, code=302)
 
-        if os.path.exists(f"/local/{redirect_path}"):
+        if os.path.exists(f"./local_packages/{redirect_path}"):
             return redirect(f"/local/{redirect_path}", code=302)
 
     if redirects and subpath in redirects.get("versions", {}):
