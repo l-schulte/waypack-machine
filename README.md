@@ -1,53 +1,104 @@
 # Waypack Machine
 
-A wayback machine for the package managers npm and Yarn. Minimal Flask-based web server that allows you to fetch and redirect to specific versions of npm and Yarn packages based on a given timestamp.
+A wayback machine for npm and Yarn package managers. This Flask-based web server filters package versions by timestamp, allowing you to fetch packages as they existed at any point in time.
 
 > **⚠️ Disclaimer:** This project is a work in progress and may be untested. Use at your own risk.
 
 ## Features
 
-- Accepts requests at `/npm/<timestamp>/<path>` and `/yarn/<timestamp>/<path>`.
-- Filters npm and Yarn package versions available before the given timestamp.
-- Redirects to the closest valid version or returns modified metadata.
+- **Timestamp filtering**: Get package versions that existed before a specific Unix timestamp
+- **NPM & Yarn support**: Can be set as a registry for both NPM and Yarn
+- **Fallback for unavailable packages**: Optional fallback to local files
 
 ## Requirements
 
-- Python
+- Python 3.10+
 - Flask
 - Requests
+- packaging (for version parsing)
 
 ## Installation
 
-1. Clone the repository:
+1. Build the Docker image:
+
    ```bash
-   git clone <repository-url>
-   cd npm-waypackmachine
+   docker build -t waypack-machine .
    ```
-2. Create a virtual environment and activate it:
+
+2. Run the container:
    ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+   docker run -p 3000:3000 waypack-machine
    ```
 
 ## Usage
 
 1. Start the server:
+
    ```bash
    python app.py
    ```
-2. Change the npm/yarn registry URL:
+
+2. Configure your package manager with a Unix timestamp:
+
    ```bash
-   npm set registry http://localhost:3000/npm/<timestamp>/
-   yarn config set registry http://localhost:3000/yarn/<timestamp>/
+   # Example: October 17, 2015 timestamp
+   npm set registry http://localhost:3000/npm/1445062501/
+   yarn config set registry http://localhost:3000/yarn/1445062501/
    ```
-3. Get your packages from the past! (Fails if newer versions are requested)
+
+3. Install packages as they existed at that time:
    ```bash
-   npm install <package-name>
+   npm install lodash  # Gets lodash version available on Oct 17, 2015
    ```
+
+## Endpoints
+
+- `/npm/<timestamp>/<package-path>` - NPM packages with timestamp filtering
+- `/yarn/<timestamp>/<package-path>` - Yarn packages with timestamp filtering
+- `/local/<file-path>` - Serve local files from `local_packages/` directory
+
+## Fallback for Unavailable Packages (Optional)
+
+Override package metadata requests:
+
+1. Configure `redirects.json` to replace metadata requests:
+   ```json
+   {
+     "versions": {
+       "package-name": {
+         "_id": "package-name",
+         "name": "package-name",
+         "versions": {
+           "0.5.0": {
+             "version": "0.5.0",
+             "dist": {
+               "tarball": "http://localhost:3000/local/package-name-0.5.0.tgz"
+             }
+           }
+         },
+         "time": {
+           "modified": "1999-12-31T23:59:59.000Z",
+           "0.5.0": "1999-12-31T23:59:59.000Z",
+           "created": "1999-12-31T23:59:59.000Z"
+         }
+       }
+     }
+   }
+   ```
+
+Override package tarball requests with local files:
+
+1. Put files in `local_packages/` directory.
+2. Configure `redirects.json`:
+   ```json
+   {
+     "files": {
+       "package-name/-/package-name-1.0.0.tgz": "package-name-1.0.0.tgz"
+     }
+   }
+   ```
+
+Local files have priority over remote registry requests and bypass timestamp filtering.
 
 ## License
 

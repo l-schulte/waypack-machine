@@ -6,6 +6,15 @@ from packaging.version import parse, InvalidVersion, Version
 logger = logging.getLogger(__name__)
 
 
+def is_valid_version(version_string: str) -> bool:
+    """Check if the version string is a valid version."""
+    try:
+        parse(version_string)
+        return True
+    except InvalidVersion:
+        return False
+
+
 def parse_version(version_string: str) -> Version:
     """Parse version string using packaging.version.parse."""
     try:
@@ -15,11 +24,24 @@ def parse_version(version_string: str) -> Version:
         return Version("0.0.0")
 
 
+def get_version_dict(package_data: dict[str, dict], version: str) -> dict[str, dict | str]:
+    """Returns the version dictionary if possible. Otherwise returns a dummy dict."""
+    if version in package_data.get("versions", {}):
+        return package_data["versions"][version]
+    dummy_name = package_data.get("name", "dummy-package")
+    return {
+        "version": version,
+        "name": dummy_name,
+        "_id": f"{dummy_name}@{version}",
+        "main": dummy_name,
+    }
+
+
 class NpmCompatibleAPI:
     def __init__(self, registry_url):
         self.registry_url = registry_url
 
-    def fromisoformat(self, date_string):
+    def fromisoformat(self, date_string: str) -> datetime:
         """Parse ISO 8601 date string to datetime object."""
         return datetime.fromisoformat(date_string.replace("Z", "+00:00"))
 
@@ -27,7 +49,7 @@ class NpmCompatibleAPI:
         """Convert datetime object to ISO 8601 string."""
         return dt.isoformat(timespec="milliseconds").replace("+00:00", "Z") if dt else ""
 
-    def fetch_package_metadata(self, package_name) -> requests.Response:
+    def fetch_package_metadata(self, package_name: str) -> requests.Response:
         """
         Fetch package metadata from the registry.
 
@@ -61,12 +83,15 @@ class NpmCompatibleAPI:
         latest_time = None
 
         for version, publish_time in package_data.get("time", {}).items():
+
+            if not is_valid_version(version) or not isinstance(publish_time, str):
+                # Skip non-version entries like "modified" and "created", or unparsable ones like "1.2.3-candidate"
+                continue
+
             publish_time = self.fromisoformat(publish_time)
 
-            if version == "modified" or version == "created":
-                continue
-            if publish_time <= target_time and version in package_data.get("versions", {}):
-                versions[version] = package_data["versions"][version]
+            if publish_time <= target_time:
+                versions[version] = get_version_dict(package_data, version)
                 time[version] = self.toisoformat(publish_time)
                 if latest_time is None or publish_time > latest_time:
                     latest_time = publish_time
