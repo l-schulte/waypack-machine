@@ -19,15 +19,52 @@ requests_counter = 0
 
 @app.route("/npm/<timestamp>/<path:subpath>", methods=["GET", "POST", "PUT", "DELETE"])
 def handle_npm_request(timestamp, subpath):
+    """
+    Handle NPM package requests with timestamp filtering.
+
+    Args:
+        timestamp (str): Unix timestamp to filter package versions.
+        subpath (str): Package path (e.g., 'lodash' or '@scope/package').
+
+    Returns:
+        Flask response with filtered package metadata or redirect.
+    """
     return handle_request_with_api(npm_api, timestamp, subpath)
 
 
 @app.route("/yarn/<timestamp>/<path:subpath>", methods=["GET", "POST", "PUT", "DELETE"])
 def handle_yarn_request(timestamp, subpath):
+    """
+    Handle Yarn package requests with timestamp filtering.
+
+    Args:
+        timestamp (str): Unix timestamp to filter package versions.
+        subpath (str): Package path (e.g., 'lodash' or '@scope/package').
+
+    Returns:
+        Flask response with filtered package metadata or redirect.
+    """
     return handle_request_with_api(yarn_api, timestamp, subpath)
 
 
 def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
+    """
+    Handle package requests using the specified API with timestamp-based filtering.
+
+    This function:
+    1. Logs request statistics to requests.json every 100 requests
+    2. Redirects complex paths (with multiple segments) directly to the registry
+    3. Fetches and filters package metadata for simple package names
+    4. Returns filtered package data with versions available before the timestamp
+
+    Args:
+        api (NpmCompatibleAPI): The package registry API to use.
+        timestamp (str): Unix timestamp for version filtering.
+        subpath (str): Package path or name.
+
+    Returns:
+        Flask response: Either a redirect or filtered package metadata JSON.
+    """
     global requests_counter
 
     if subpath not in requests_dict:
@@ -47,13 +84,11 @@ def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
     ):
         return redirect(f"{api.registry_url}{subpath}", code=302)
 
-    # Convert timestamp to integer
     try:
         timestamp = int(timestamp)
     except ValueError:
         return "Invalid timestamp format", 400
 
-    # Fetch package metadata
     package_name = subpath
     package_response = api.fetch_package_metadata(package_name)
     if package_response.status_code != 200:
@@ -63,10 +98,8 @@ def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
             dict(package_response.headers),
         )
 
-    # Filter versions by timestamp
     filtered_data = api.filter_versions_by_timestamp(package_response.json(), timestamp)
 
-    # Return the modified JSON response
     return filtered_data, 200, {"Content-Type": "application/json"}
 
 

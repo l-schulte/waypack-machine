@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime, timezone
 import logging
+from packaging.version import parse as parse_version
 
 logger = logging.getLogger(__name__)
 
@@ -25,7 +26,7 @@ class NpmCompatibleAPI:
             package_name (str): The name of the package.
 
         Returns:
-            dict: The package metadata, or None if the request fails.
+            requests.Response: The response object from the registry request.
         """
         response = requests.get(f"{self.registry_url}{package_name}")
         if response.status_code != 200:
@@ -34,35 +35,39 @@ class NpmCompatibleAPI:
 
     def filter_versions_by_timestamp(self, package_data: dict, timestamp: int) -> dict:
         """
-        Filter package versions by a given Unix timestamp.
+        Filter package versions by a given Unix timestamp and update package metadata.
 
         Args:
-            package_data (dict): The package metadata.
-            timestamp (int): The Unix timestamp.
+            package_data (dict): The package metadata to filter.
+            timestamp (int): The Unix timestamp to filter against.
 
         Returns:
-            dict: Filtered package data with versions and time.
+            dict: Modified package data with filtered versions, updated time metadata,
+                  and dist-tags containing the latest available version.
         """
         target_time = datetime.fromtimestamp(timestamp, tz=timezone.utc)
-        new_package_data = {"versions": {}, "time": {}}
-        new_modified_time = None
 
-        time = package_data.get("time", {})
-        for version, publish_time in time.items():
+        versions: dict[str, dict] = {}
+        time: dict[str, str] = {}
+        latest_time = None
+
+        for version, publish_time in package_data.get("time", {}).items():
             publish_time = self.fromisoformat(publish_time)
+
             if version == "modified" or version == "created":
                 continue
             if publish_time <= target_time and version in package_data.get("versions", {}):
-                new_package_data["versions"][version] = package_data["versions"][version]
-                new_package_data["time"][version] = self.toisoformat(publish_time)
-                if new_modified_time is None or publish_time > new_modified_time:
-                    new_modified_time = publish_time
-        new_package_data["time"]["modified"] = (
-            self.toisoformat(new_modified_time) if new_modified_time else None
-        )
-        new_package_data["time"]["created"] = time.get("created", None)
+                versions[version] = package_data["versions"][version]
+                time[version] = self.toisoformat(publish_time)
+                if latest_time is None or publish_time > latest_time:
+                    latest_time = publish_time
 
-        package_data["versions"] = new_package_data["versions"]
-        package_data["time"] = new_package_data["time"]
+        time["modified"] = self.toisoformat(latest_time) if latest_time else ""
+        time["created"] = time.get("created", "")
+        latest = max(versions.keys(), key=parse_version, default=None)
+
+        package_data["versions"] = versions
+        package_data["time"] = time
+        package_data["dist-tags"] = {"latest": latest} if latest else {}
 
         return package_data
