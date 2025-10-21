@@ -84,8 +84,8 @@ class NpmCompatibleAPI:
 
         for version, publish_time in package_data.get("time", {}).items():
 
-            if not is_valid_version(version) or not isinstance(publish_time, str):
-                # Skip non-version entries like "modified" and "created", or unparsable ones like "1.2.3-candidate"
+            if version not in package_data.get("versions", {}) or not isinstance(publish_time, str):
+                # Skip non-version entries like "modified" and "created", or unpublished versions without timestamps.
                 continue
 
             publish_time = self.fromisoformat(publish_time)
