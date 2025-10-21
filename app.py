@@ -11,8 +11,8 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 logger = logging.getLogger(__name__)
 
-npm_api = NpmCompatibleAPI("https://registry.npmjs.org/")
-yarn_api = NpmCompatibleAPI("https://registry.yarnpkg.com/")
+npm_api = NpmCompatibleAPI("http://registry.npmjs.org/")
+yarn_api = NpmCompatibleAPI("http://registry.yarnpkg.com/")
 
 redirects = (
     json.load(open("redirects.config.json", "r"))
