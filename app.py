@@ -5,14 +5,18 @@ from endpoints.npm_compatible_apis import NpmCompatibleAPI
 import json
 import os
 
+
 app = Flask(__name__)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 logger = logging.getLogger(__name__)
 
-npm_api = NpmCompatibleAPI("http://registry.npmjs.org/")
-yarn_api = NpmCompatibleAPI("http://registry.yarnpkg.com/")
+npm_registry = os.getenv("NPM_REGISTRY_URL") or "http://registry.npmjs.org/"
+yarn_registry = os.getenv("YARN_REGISTRY_URL") or "http://registry.yarnpkg.com/"
+
+npm_api = NpmCompatibleAPI(npm_registry)
+yarn_api = NpmCompatibleAPI(yarn_registry)
 
 redirects = (
     json.load(open("redirects.config.json", "r"))
