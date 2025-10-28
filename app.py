@@ -18,9 +18,9 @@ yarn_registry = os.getenv("YARN_REGISTRY_URL") or "http://registry.yarnpkg.com/"
 npm_api = NpmCompatibleAPI(npm_registry)
 yarn_api = NpmCompatibleAPI(yarn_registry)
 
-redirects = (
-    json.load(open("redirects.config.json", "r"))
-    if os.path.exists("redirects.config.json")
+local_packages_config = (
+    json.load(open("local_packages.config.json", "r"))
+    if os.path.exists("local_packages.config.json")
     else None
 )
 
@@ -92,8 +92,8 @@ def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
     """
 
     # Redirect paths (local or external)
-    if redirects and subpath in redirects.get("files", {}):
-        redirect_path = redirects["files"][subpath]
+    if local_packages_config and subpath in local_packages_config.get("files", {}):
+        redirect_path = local_packages_config["files"][subpath]
 
         if redirect_path.startswith("http"):
             return redirect(redirect_path, code=302)
@@ -101,8 +101,8 @@ def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
         if os.path.exists(f"./local_files/{redirect_path}"):
             return serve_local_file(redirect_path)
 
-    if redirects and subpath in redirects.get("versions", {}):
-        return redirects["versions"][subpath], 200, {"Content-Type": "application/json"}
+    if local_packages_config and subpath in local_packages_config.get("versions", {}):
+        return local_packages_config["versions"][subpath], 200, {"Content-Type": "application/json"}
 
     if (
         subpath[0] == "@"
