@@ -72,8 +72,10 @@ Override package metadata requests:
              "version": "0.5.0",
              "dist": {
                "tarball": "http://localhost:3000/local/package-name-0.5.0.tgz",
-               "shasum": "shasum waypack/packages/package-name-0.5.0.tgz", // hex encoded shasum
-               "integrity": "shasum -b -a 512 waypack/packages/package-name-0.5.0.tgz | awk '{ print $1 }' | xxd -r -p | base64" // base64 encoded integrity
+               // shasum waypack/packages/package-name-0.5.0.tgz
+               "shasum": "YOUR_HEX_ENCODED_SHASUM",
+               // shasum -b -a 512 waypack/packages/package-name-0.5.0.tgz | awk '{ print $1 }' | xxd -r -p | base64
+               "integrity": "YOUR_BASE64_ENCODED_INTEGRITY"
              }
            }
          },
