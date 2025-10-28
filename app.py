@@ -55,6 +55,20 @@ def handle_yarn_request(timestamp, subpath):
     return handle_request_with_api(yarn_api, timestamp, subpath)
 
 
+@app.route("/local_config")
+def get_local_packages_config():
+    """
+    Endpoint to retrieve the local packages configuration.
+
+    Returns:
+        Flask response with the local packages configuration JSON.
+    """
+    if local_packages_config:
+        return local_packages_config, 200, {"Content-Type": "application/json"}
+    else:
+        return "Local packages configuration not found", 404
+
+
 @app.route("/local/<path:subpath>")
 def serve_local_file(subpath):
     """
