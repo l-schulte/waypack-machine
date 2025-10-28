@@ -55,6 +55,23 @@ def handle_yarn_request(timestamp, subpath):
     return handle_request_with_api(yarn_api, timestamp, subpath)
 
 
+@app.route("/local/<path:subpath>")
+def serve_local_file(subpath):
+    """
+    Serve local files from the 'local_files' directory.
+
+    Args:
+        subpath (str): Path to the local file to serve.
+
+    Returns:
+        Flask response with the local file or 404 if not found.
+    """
+    try:
+        return send_from_directory("local_files", subpath)
+    except FileNotFoundError:
+        return f"Local file not found: {subpath}", 404
+
+
 def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
     """
     Handle package requests using the specified API with timestamp-based filtering.
@@ -81,8 +98,8 @@ def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
         if redirect_path.startswith("http"):
             return redirect(redirect_path, code=302)
 
-        if os.path.exists(f"./local_packages/{redirect_path}"):
-            return send_from_directory("local_packages", redirect_path)
+        if os.path.exists(f"./local_files/{redirect_path}"):
+            return serve_local_file(redirect_path)
 
     if redirects and subpath in redirects.get("versions", {}):
         return redirects["versions"][subpath], 200, {"Content-Type": "application/json"}

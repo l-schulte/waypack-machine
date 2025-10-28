@@ -55,6 +55,7 @@ A wayback machine for npm and Yarn package managers. This Flask-based web server
 
 - `/npm/<timestamp>/<package-path>` - NPM packages with timestamp filtering
 - `/yarn/<timestamp>/<package-path>` - Yarn packages with timestamp filtering
+- `/local/<path>` - Serve local files from `local_files/` directory
 
 ## Fallback for Unavailable Packages (Optional)
 
@@ -71,7 +72,8 @@ Override package metadata requests:
            "0.5.0": {
              "version": "0.5.0",
              "dist": {
-               "tarball": "http://localhost:3000/local/package-name-0.5.0.tgz",
+               // tarball URL pointing to your server, date set to 2000-01-01
+               "tarball": "http://localhost:3000/npm/946684800/package-name-0.5.0.tgz",
                // shasum waypack/packages/package-name-0.5.0.tgz
                "shasum": "YOUR_HEX_ENCODED_SHASUM",
                // shasum -b -a 512 waypack/packages/package-name-0.5.0.tgz | awk '{ print $1 }' | xxd -r -p | base64
