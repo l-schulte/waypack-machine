@@ -92,36 +92,30 @@ def serve_local_file(subpath):
 def handle_custom_cache(baseurl, subpath):
     """
     Handle custom cache requests.
-
     Route provides the original URL. Function checks if the requested resource
     (subpath) is available as a local file and serves it. If not found, it gets
     the resource from the original URL (baseurl/subpath), stores it, and serves it.
-
     Example: https://www.electronjs.org/headers/v13.1.8/node-v13.1.8-headers.tar.gz
     Baseurl: https://www.electronjs.org/headers
     Subpath: v13.1.8/node-v13.1.8-headers.tar.gz
-
     Example request:
     GET /custom_cache/https://www.electronjs.org/headers/resource/v13.1.8/node-v13.1.8-headers.tar.gz
     """
     full_url = f"{baseurl}/{subpath}"
     cache_path = f"{hashlib.sha256(baseurl.encode()).hexdigest()}/{subpath}"
-
     if os.path.exists(f"./local_files/{cache_path}"):
         return serve_local_file(cache_path)
 
     print(f"Fetching resource from: {full_url}")
-    response = requests.get(full_url, stream=True)
+    response = requests.get(full_url)
     print(f"Response status code: {response.status_code}")
-    if response.status_code == 200:
 
+    if response.status_code == 200:
         os.makedirs(os.path.dirname(f"./local_files/{cache_path}"), exist_ok=True)
         with open(f"./local_files/{cache_path}", "wb") as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
-
+            f.write(response.content)
         return Response(
-            response.iter_content(chunk_size=8192),
+            response.content,
             content_type=response.headers.get("Content-Type"),
         )
     else:
