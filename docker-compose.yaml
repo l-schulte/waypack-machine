@@ -1,0 +1,28 @@
+services:
+  waypack:
+    build:
+      context: .
+    container_name: waypack
+    ports:
+      - "3000:3000"
+    environment:
+      - NPM_REGISTRY_URL=http://verdaccio:4873/
+      - YARN_REGISTRY_URL=http://verdaccio:4873/
+    volumes:
+      - .:/app
+    depends_on:
+      - verdaccio
+    networks:
+      - mining-net
+  verdaccio:
+    image: verdaccio/verdaccio
+    container_name: verdaccio
+    ports:
+      - "4873:4873"
+    networks:
+      - mining-net
+
+networks:
+  mining-net:
+    driver: bridge
+    name: mining-net

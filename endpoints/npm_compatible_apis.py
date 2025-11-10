@@ -1,53 +1,24 @@
 import requests
 from datetime import datetime, timezone
 import logging
-from packaging.version import parse, InvalidVersion, Version
+from endpoints.endpoint import parse_version, get_version_dict, fromisoformat, toisoformat
 
 logger = logging.getLogger(__name__)
-
-
-def is_valid_version(version_string: str) -> bool:
-    """Check if the version string is a valid version."""
-    try:
-        parse(version_string)
-        return True
-    except InvalidVersion:
-        return False
-
-
-def parse_version(version_string: str) -> Version:
-    """Parse version string using packaging.version.parse."""
-    try:
-        return parse(version_string)
-    except InvalidVersion as e:
-        logger.error(f"Invalid version string: {version_string}")
-        return Version("0.0.0")
-
-
-def get_version_dict(package_data: dict[str, dict], version: str) -> dict[str, dict | str]:
-    """Returns the version dictionary if possible. Otherwise returns a dummy dict."""
-    if version in package_data.get("versions", {}):
-        return package_data["versions"][version]
-    dummy_name = package_data.get("name", "dummy-package")
-    return {
-        "version": version,
-        "name": dummy_name,
-        "_id": f"{dummy_name}@{version}",
-        "main": dummy_name,
-    }
 
 
 class NpmCompatibleAPI:
     def __init__(self, registry_url):
         self.registry_url = registry_url
 
-    def fromisoformat(self, date_string: str) -> datetime:
-        """Parse ISO 8601 date string to datetime object."""
-        return datetime.fromisoformat(date_string.replace("Z", "+00:00"))
+    content_type: str = "application/json"
 
-    def toisoformat(self, dt: datetime) -> str:
-        """Convert datetime object to ISO 8601 string."""
-        return dt.isoformat(timespec="milliseconds").replace("+00:00", "Z") if dt else ""
+    def should_redirect(self, subpath: str) -> bool:
+        return (
+            subpath[0] == "@"
+            and len(subpath.split("/")) > 2
+            or subpath[0] != "@"
+            and len(subpath.split("/")) > 1
+        )
 
     def fetch_package_metadata(self, package_name: str) -> requests.Response:
         """
@@ -88,15 +59,15 @@ class NpmCompatibleAPI:
                 # Skip non-version entries like "modified" and "created", or unpublished versions without timestamps.
                 continue
 
-            publish_time = self.fromisoformat(publish_time)
+            publish_time = fromisoformat(publish_time)
 
             if publish_time <= target_time:
                 versions[version] = get_version_dict(package_data, version)
-                time[version] = self.toisoformat(publish_time)
+                time[version] = toisoformat(publish_time)
                 if latest_time is None or publish_time > latest_time:
                     latest_time = publish_time
 
-        time["modified"] = self.toisoformat(latest_time) if latest_time else ""
+        time["modified"] = toisoformat(latest_time) if latest_time else ""
         time["created"] = package_data.get("time", {"created": ""}).get("created", "")
         latest = max(versions.keys(), key=parse_version, default=None)
 

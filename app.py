@@ -2,6 +2,7 @@ from flask import Flask, Response, redirect, send_from_directory
 import logging
 from datetime import datetime, timezone
 from endpoints.npm_compatible_apis import NpmCompatibleAPI
+from endpoints.pip_apis import PipAPI
 import json
 import os
 import requests
@@ -16,9 +17,11 @@ logger = logging.getLogger(__name__)
 
 npm_registry = os.getenv("NPM_REGISTRY_URL") or "http://registry.npmjs.org/"
 yarn_registry = os.getenv("YARN_REGISTRY_URL") or "http://registry.yarnpkg.com/"
+pip_registry = os.getenv("PIP_REGISTRY_URL") or "https://pypi.org/simple/"
 
 npm_api = NpmCompatibleAPI(npm_registry)
 yarn_api = NpmCompatibleAPI(yarn_registry)
+pip_api = PipAPI(pip_registry)
 
 local_packages_config = (
     json.load(open("local_packages.config.json", "r"))
@@ -55,6 +58,21 @@ def handle_yarn_request(timestamp, subpath):
         Flask response with filtered package metadata or redirect.
     """
     return handle_request_with_api(yarn_api, timestamp, subpath)
+
+
+@app.route("/pip/<timestamp>/<path:subpath>", methods=["GET", "POST", "PUT", "DELETE"])
+def handle_pip_request(timestamp, subpath):
+    """
+    Handle pip package requests with timestamp filtering.
+
+    Args:
+        timestamp (str): Unix timestamp to filter package versions.
+        subpath (str): Package path (e.g., 'lodash' or '@scope/package').
+
+    Returns:
+        Flask response with filtered package metadata or redirect.
+    """
+    return handle_request_with_api(pip_api, timestamp, subpath)
 
 
 @app.route("/local_config")
@@ -122,7 +140,7 @@ def handle_custom_cache(baseurl, subpath):
         return f"Resource not found at {full_url}", response.status_code
 
 
-def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
+def handle_request_with_api(api: NpmCompatibleAPI | PipAPI, timestamp, subpath: str):
     """
     Handle package requests using the specified API with timestamp-based filtering.
 
@@ -154,12 +172,7 @@ def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
     if local_packages_config and subpath in local_packages_config.get("versions", {}):
         return local_packages_config["versions"][subpath], 200, {"Content-Type": "application/json"}
 
-    if (
-        subpath[0] == "@"
-        and len(subpath.split("/")) > 2
-        or subpath[0] != "@"
-        and len(subpath.split("/")) > 1
-    ):
+    if api.should_redirect(subpath):
         return redirect(f"{api.registry_url}{subpath}", code=302)
 
     try:
@@ -178,7 +191,7 @@ def handle_request_with_api(api: NpmCompatibleAPI, timestamp, subpath: str):
 
     filtered_data = api.filter_versions_by_timestamp(package_response.json(), timestamp)
 
-    return filtered_data, 200, {"Content-Type": "application/json"}
+    return filtered_data, 200, {"Content-Type": api.content_type}
 
 
 if __name__ == "__main__":
