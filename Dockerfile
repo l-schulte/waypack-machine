@@ -11,7 +11,8 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code into the container
-COPY . .
+# COPY . .
+# Run mount instead: docker run -v $(pwd):/app ...
 
 # Expose the port the app runs on
 EXPOSE 3000
