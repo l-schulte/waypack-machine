@@ -1,5 +1,7 @@
 local_files/
 test/
+test_env/
+tmp/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

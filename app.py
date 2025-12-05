@@ -17,17 +17,39 @@ logger = logging.getLogger(__name__)
 
 npm_registry = os.getenv("NPM_REGISTRY_URL") or "http://registry.npmjs.org/"
 yarn_registry = os.getenv("YARN_REGISTRY_URL") or "http://registry.yarnpkg.com/"
-pip_registry = os.getenv("PIP_REGISTRY_URL") or "https://pypi.org/simple/"
+pip_index = os.getenv("PIP_INDEX_URL") or "https://pypi.org/simple/"
 
 npm_api = NpmCompatibleAPI(npm_registry)
 yarn_api = NpmCompatibleAPI(yarn_registry)
-pip_api = PipAPI(pip_registry)
+pip_api = PipAPI(pip_index)
 
 local_packages_config = (
     json.load(open("local_packages.config.json", "r"))
     if os.path.exists("local_packages.config.json")
     else None
 )
+
+# Log startup info
+logger.info("Configured registries:")
+logger.info("  NPM_REGISTRY_URL \t%s", npm_registry)
+logger.info("  YARN_REGISTRY_URL \t%s", yarn_registry)
+logger.info("  PIP_INDEX_URL \t%s", pip_index)
+
+if local_packages_config:
+    files = local_packages_config.get("files", {})
+    versions = local_packages_config.get("versions", {})
+    logger.info(
+        "Local packages configuration loaded from %s", os.path.abspath("local_packages.config.json")
+    )
+    logger.info("  local files entries: %d", len(files))
+    if files:
+        logger.info("    sample files: %s", ", ".join(list(files.keys())[:10]))
+    logger.info("  local versions entries: %d", len(versions))
+    if versions:
+        logger.info("    sample versions: %s", ", ".join(list(versions.keys())[:10]))
+    logger.info("Local files directory: %s", os.path.abspath("local_files"))
+else:
+    logger.info("No local packages configuration found (local_packages.config.json missing).")
 
 
 @app.route("/npm/<timestamp>/<path:subpath>", methods=["GET", "POST", "PUT", "DELETE"])
@@ -106,40 +128,6 @@ def serve_local_file(subpath):
         return f"Local file not found: {subpath}", 404
 
 
-@app.route("/custom_cache/<path:baseurl>/resource/<path:subpath>")
-def handle_custom_cache(baseurl, subpath):
-    """
-    Handle custom cache requests.
-    Route provides the original URL. Function checks if the requested resource
-    (subpath) is available as a local file and serves it. If not found, it gets
-    the resource from the original URL (baseurl/subpath), stores it, and serves it.
-    Example: https://www.electronjs.org/headers/v13.1.8/node-v13.1.8-headers.tar.gz
-    Baseurl: https://www.electronjs.org/headers
-    Subpath: v13.1.8/node-v13.1.8-headers.tar.gz
-    Example request:
-    GET /custom_cache/https://www.electronjs.org/headers/resource/v13.1.8/node-v13.1.8-headers.tar.gz
-    """
-    full_url = f"{baseurl}/{subpath}"
-    cache_path = f"{hashlib.sha256(baseurl.encode()).hexdigest()}/{subpath}"
-    if os.path.exists(f"./local_files/{cache_path}"):
-        return serve_local_file(cache_path)
-
-    print(f"Fetching resource from: {full_url}")
-    response = requests.get(full_url)
-    print(f"Response status code: {response.status_code}")
-
-    if response.status_code == 200:
-        os.makedirs(os.path.dirname(f"./local_files/{cache_path}"), exist_ok=True)
-        with open(f"./local_files/{cache_path}", "wb") as f:
-            f.write(response.content)
-        return Response(
-            response.content,
-            content_type=response.headers.get("Content-Type"),
-        )
-    else:
-        return f"Resource not found at {full_url}", response.status_code
-
-
 def handle_request_with_api(api: NpmCompatibleAPI | PipAPI, timestamp, subpath: str):
     """
     Handle package requests using the specified API with timestamp-based filtering.
@@ -173,7 +161,7 @@ def handle_request_with_api(api: NpmCompatibleAPI | PipAPI, timestamp, subpath: 
         return local_packages_config["versions"][subpath], 200, {"Content-Type": "application/json"}
 
     if api.should_redirect(subpath):
-        return redirect(f"{api.registry_url}{subpath}", code=302)
+        return redirect(f"{api.base_url}{subpath}", code=302)
 
     try:
         timestamp = int(timestamp)

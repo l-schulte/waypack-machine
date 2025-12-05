@@ -7,8 +7,8 @@ logger = logging.getLogger(__name__)
 
 
 class NpmCompatibleAPI:
-    def __init__(self, registry_url):
-        self.registry_url = registry_url
+    def __init__(self, base_url):
+        self.base_url = base_url
 
     content_type: str = "application/json"
 
@@ -30,7 +30,7 @@ class NpmCompatibleAPI:
         Returns:
             requests.Response: The response object from the registry request.
         """
-        response = requests.get(f"{self.registry_url}{package_name}")
+        response = requests.get(f"{self.base_url}{package_name}")
         if response.status_code != 200:
             logger.error(f"Failed to fetch package metadata for {package_name}")
         return response

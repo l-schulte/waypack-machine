@@ -8,20 +8,38 @@ services:
     environment:
       - NPM_REGISTRY_URL=http://verdaccio:4873/
       - YARN_REGISTRY_URL=http://verdaccio:4873/
+      - PIP_INDEX_URL=http://pypi_cache:80/simple/
     volumes:
       - .:/app
     depends_on:
       - verdaccio
+      - pypi_cache
     networks:
       - mining-net
+
   verdaccio:
     image: verdaccio/verdaccio
     container_name: verdaccio
     ports:
       - "4873:4873"
+    volumes:
+      - verdaccio_storage:/verdaccio/storage
     networks:
       - mining-net
 
+  pypi_cache:
+    image: ghcr.io/hauntsaninja/nginx_pypi_cache:latest
+    container_name: pypi_cache
+    ports:
+      - "5000:80"
+    volumes:
+      - pypi_cache_data:/var/lib/nginx/pypi
+    networks:
+      - mining-net
+
+volumes:
+  verdaccio_storage:
+  pypi_cache_data:
 networks:
   mining-net:
     driver: bridge
