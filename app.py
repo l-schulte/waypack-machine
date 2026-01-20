@@ -7,7 +7,10 @@ import json
 import os
 import requests
 import hashlib
+import csv
+from threading import Lock
 
+inventory_lock = Lock()
 
 app = Flask(__name__)
 
@@ -113,29 +116,26 @@ def get_local_packages_config():
 
 @app.route("/request/<path:original_url>")
 def proxy_request(original_url):
-    """
-    Proxy a request to the specified original URL, unless result is cached.
-    Args:
-        original_url (str): The original URL to proxy the request to.
-    """
     cache_dir = "local_cache"
     os.makedirs(cache_dir, exist_ok=True)
-
     url_hash = hashlib.sha256(original_url.encode()).hexdigest()
     cache_file_path = os.path.join(cache_dir, url_hash)
+    inventory_file_path = os.path.join(cache_dir, "cache_inventory.csv")
 
     if os.path.exists(cache_file_path):
         with open(cache_file_path, "rb") as cache_file:
             cached_content = cache_file.read()
-        print("Serving from cache:", original_url)
         return Response(cached_content, status=200, content_type="application/octet-stream")
 
-    print("Fetching and caching:", original_url)
     response = requests.get(original_url)
-
     if response.status_code == 200:
         with open(cache_file_path, "wb") as cache_file:
             cache_file.write(response.content)
+
+        with inventory_lock:  # Ensure thread-safe file access
+            with open(inventory_file_path, "a", newline="") as inventory_file:
+                writer = csv.writer(inventory_file)
+                writer.writerow([url_hash, original_url])
 
     return Response(
         response.content,
