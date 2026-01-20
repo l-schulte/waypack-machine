@@ -2,6 +2,7 @@ local_files/
 test/
 test_env/
 tmp/
+local_packages.config.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
