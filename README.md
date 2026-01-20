@@ -9,6 +9,7 @@ A wayback machine for npm and Yarn package managers. This Flask-based web server
 - **Timestamp filtering**: Get package versions that existed before a specific Unix timestamp
 - **NPM & Yarn support**: Can be set as a registry for both NPM and Yarn
 - **Fallback for unavailable packages**: Optional fallback to local files
+- **Proxy request feature**: Proxy requests to specified URLs with caching
 
 ## Requirements
 
@@ -56,6 +57,28 @@ A wayback machine for npm and Yarn package managers. This Flask-based web server
 - `/npm/<timestamp>/<package-path>` - NPM packages with timestamp filtering
 - `/yarn/<timestamp>/<package-path>` - Yarn packages with timestamp filtering
 - `/local/<path>` - Serve local files from `local_files/` directory
+- `/request/<path:original_url>` - Proxy requests to specified URLs
+
+## Proxy Request Feature
+
+The application includes a proxy request feature that allows users to proxy requests to specified URLs while caching the responses for efficiency. This feature is particularly useful for reducing redundant network calls and improving response times for frequently accessed resources.
+
+### Endpoint
+
+- **URL:** `/request/<path:original_url>`  
+- **Method:** `GET`  
+
+### Description
+This endpoint proxies a request to the specified `original_url`. If the response for the URL has been cached, it will return the cached content instead of making a new network request.
+
+### Arguments
+- `original_url` (str): The original URL to proxy.
+
+### Returns
+- `Response`: The response from the proxied URL or cached content.
+
+### Caching
+The responses are cached in the `local_cache` directory, and the cache is managed using SHA-256 hashes of the URLs. If a cached response exists, it is returned directly, reducing the need for repeated network requests.
 
 ## Fallback for Unavailable Packages (Optional)
 

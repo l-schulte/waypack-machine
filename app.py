@@ -116,6 +116,15 @@ def get_local_packages_config():
 
 @app.route("/request/<path:original_url>")
 def proxy_request(original_url):
+    """
+    Proxy a request to the specified original URL, caching the response.
+
+    Args:
+        original_url (str): The original URL to proxy.
+
+    Returns:
+        Response: The response from the proxied URL or cached content.
+    """
     # Split at "http" and use the last part to avoid processing prefixed URLs
     target_url = original_url.split("http")[-1]
     target_url = "http" + target_url
