@@ -116,9 +116,12 @@ def get_local_packages_config():
 
 @app.route("/request/<path:original_url>")
 def proxy_request(original_url):
+    # Split at "http" and use the last part to avoid processing prefixed URLs
+    target_url = original_url.split("http")[-1]
+    target_url = "http" + target_url
     cache_dir = "local_cache"
     os.makedirs(cache_dir, exist_ok=True)
-    url_hash = hashlib.sha256(original_url.encode()).hexdigest()
+    url_hash = hashlib.sha256(target_url.encode()).hexdigest()
     cache_file_path = os.path.join(cache_dir, url_hash)
     inventory_file_path = os.path.join(cache_dir, "cache_inventory.csv")
 
@@ -127,15 +130,15 @@ def proxy_request(original_url):
             cached_content = cache_file.read()
         return Response(cached_content, status=200, content_type="application/octet-stream")
 
-    response = requests.get(original_url)
+    response = requests.get(target_url)
     if response.status_code == 200:
         with open(cache_file_path, "wb") as cache_file:
             cache_file.write(response.content)
 
-        with inventory_lock:  # Ensure thread-safe file access
+        with inventory_lock:
             with open(inventory_file_path, "a", newline="") as inventory_file:
                 writer = csv.writer(inventory_file)
-                writer.writerow([url_hash, original_url])
+                writer.writerow([url_hash, target_url])
 
     return Response(
         response.content,
