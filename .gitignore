@@ -5,6 +5,9 @@ test_env/
 tmp/
 local_packages.config.json
 
+# IDE files
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
