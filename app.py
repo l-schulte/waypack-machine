@@ -1,4 +1,4 @@
-from flask import Flask, Response, redirect, send_from_directory
+from flask import Flask, Response, redirect, send_from_directory, request
 import logging
 from datetime import datetime, timezone
 from endpoints.npm_compatible_apis import NpmCompatibleAPI
@@ -128,6 +128,9 @@ def proxy_request(original_url):
     # Split at "http" and use the last part to avoid processing prefixed URLs
     target_url = original_url.split("http")[-1]
     target_url = "http" + target_url
+    target_contenttype = request.headers.get("Accept", "application/octet-stream")
+    target_headers = {"Accept": target_contenttype}
+
     cache_dir = "local_cache"
     os.makedirs(cache_dir, exist_ok=True)
     url_hash = hashlib.sha256(target_url.encode()).hexdigest()
@@ -139,7 +142,7 @@ def proxy_request(original_url):
             cached_content = cache_file.read()
         return Response(cached_content, status=200, content_type="application/octet-stream")
 
-    response = requests.get(target_url)
+    response = requests.get(target_url, headers=target_headers)
     if response.status_code == 200:
         with open(cache_file_path, "wb") as cache_file:
             cache_file.write(response.content)
