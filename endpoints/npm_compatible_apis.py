@@ -71,19 +71,27 @@ class NpmCompatibleAPI:
         time["modified"] = toisoformat(latest_time) if latest_time else ""
         time["created"] = package_data.get("time", {"created": ""}).get("created", "")
         parsed_versions = [parse_version(v) for v in versions.keys()]
-        latest: semver.VersionInfo | None = max(
-            [v for v in parsed_versions if v.prerelease == ()], default=None
+
+        logger.debug(
+            "Filtered versions for package %s: %s",
+            package_data.get("name", "unknown"),
+            list(versions.keys()),
         )
-        next: semver.VersionInfo | None = max(
-            [v for v in parsed_versions if v.prerelease != ()], default=None
-        )
+        prerelease_versions = [v for v in parsed_versions if v.prerelease != None]
+        next: semver.VersionInfo | None = max(prerelease_versions, default=None)
+        release_versions = [v for v in parsed_versions if v.prerelease == None]
+        latest: semver.VersionInfo | None = max(release_versions, default=next)
+        beta_versions = [v for v in parsed_versions if v.prerelease and "beta" in v.prerelease]
+        beta: semver.VersionInfo | None = max(beta_versions, default=None)
 
         package_data["versions"] = versions
         package_data["time"] = time
         package_data["dist-tags"] = {}
-        if latest:
-            package_data["dist-tags"]["latest"] = latest.__str__()
         if next:
             package_data["dist-tags"]["next"] = next.__str__()
+        if latest:
+            package_data["dist-tags"]["latest"] = latest.__str__()
+        if beta:
+            package_data["dist-tags"]["beta"] = beta.__str__()
 
         return package_data
