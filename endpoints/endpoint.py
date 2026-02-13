@@ -1,28 +1,20 @@
 from datetime import datetime, timezone
 import logging
-from packaging.version import parse, InvalidVersion, Version
 import requests
+import semver
 
 
 logger = logging.getLogger(__name__)
 
 
-def is_valid_version(version_string: str) -> bool:
-    """Check if the version string is a valid version."""
-    try:
-        parse(version_string)
-        return True
-    except InvalidVersion:
-        return False
-
-
-def parse_version(version_string: str) -> Version:
+def parse_version(version_string: str) -> semver.VersionInfo:
     """Parse version string using packaging.version.parse."""
+
     try:
-        return parse(version_string)
-    except InvalidVersion as e:
-        logger.error(f"Invalid version string: {version_string}")
-        return Version("0.0.0")
+        return semver.VersionInfo.parse(version_string)
+    except ValueError as e:
+        logger.error(f"Invalid version string: {version_string} - {e}")
+        return semver.VersionInfo(0, 0, 0)
 
 
 def get_version_dict(package_data: dict[str, dict], version: str) -> dict[str, dict | str]:

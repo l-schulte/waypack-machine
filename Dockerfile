@@ -2,7 +2,7 @@
 FROM python:3.10-slim
 
 # Set the working directory in the container
-WORKDIR /coverage_reloaded
+WORKDIR /app
 
 # Copy the requirements file into the container
 COPY requirements.txt ./
@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code into the container
 # COPY . .
-# Run mount instead: docker run -v $(pwd):/coverage_reloaded ...
+# Run mount instead: docker run -v $(pwd):/app ...
 
 # Expose the port the app runs on
 EXPOSE 3000

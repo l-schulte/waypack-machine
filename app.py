@@ -194,6 +194,7 @@ def handle_request_with_api(api: NpmCompatibleAPI | PipAPI, timestamp, subpath: 
     Returns:
         Flask response: Either a redirect or filtered package metadata JSON.
     """
+    logger.debug("Handling request for %s with timestamp %s", subpath, timestamp)
 
     # Redirect paths (local or external)
     if local_packages_config and subpath in local_packages_config.get("files", {}):

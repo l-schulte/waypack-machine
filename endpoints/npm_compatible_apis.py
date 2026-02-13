@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime, timezone
 import logging
+import semver
 from endpoints.endpoint import parse_version, get_version_dict, fromisoformat, toisoformat
 
 logger = logging.getLogger(__name__)
@@ -69,10 +70,20 @@ class NpmCompatibleAPI:
 
         time["modified"] = toisoformat(latest_time) if latest_time else ""
         time["created"] = package_data.get("time", {"created": ""}).get("created", "")
-        latest = max(versions.keys(), key=parse_version, default=None)
+        parsed_versions = [parse_version(v) for v in versions.keys()]
+        latest: semver.VersionInfo | None = max(
+            [v for v in parsed_versions if v.prerelease == ()], default=None
+        )
+        next: semver.VersionInfo | None = max(
+            [v for v in parsed_versions if v.prerelease != ()], default=None
+        )
 
         package_data["versions"] = versions
         package_data["time"] = time
-        package_data["dist-tags"] = {"latest": latest} if latest else {}
+        package_data["dist-tags"] = {}
+        if latest:
+            package_data["dist-tags"]["latest"] = latest.__str__()
+        if next:
+            package_data["dist-tags"]["next"] = next.__str__()
 
         return package_data
