@@ -4,6 +4,8 @@ test/
 test_env/
 tmp/
 local_packages.config.json
+raw_packages/*/*
+raw_packages/*.tar.gz
 
 # IDE files
 .vscode/

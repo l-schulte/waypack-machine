@@ -1,6 +1,5 @@
 from datetime import datetime, timezone
 import logging
-import requests
 import semver
 
 
@@ -8,8 +7,6 @@ logger = logging.getLogger(__name__)
 
 
 def parse_version(version_string: str) -> semver.VersionInfo:
-    """Parse version string using packaging.version.parse."""
-
     try:
         return semver.VersionInfo.parse(version_string)
     except ValueError as e:
@@ -31,10 +28,8 @@ def get_version_dict(package_data: dict[str, dict], version: str) -> dict[str, d
 
 
 def fromisoformat(date_string: str) -> datetime:
-    """Parse ISO 8601 date string to datetime object."""
     return datetime.fromisoformat(date_string.replace("Z", "+00:00"))
 
 
 def toisoformat(dt: datetime) -> str:
-    """Convert datetime object to ISO 8601 string."""
     return dt.isoformat(timespec="milliseconds").replace("+00:00", "Z") if dt else ""

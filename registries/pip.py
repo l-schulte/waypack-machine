@@ -1,7 +1,6 @@
 import requests
 from datetime import datetime, timezone
 import logging
-import json
 import re
 
 logger = logging.getLogger(__name__)
@@ -17,15 +16,6 @@ class PipAPI:
         return False
 
     def fetch_package_metadata(self, package_name: str) -> requests.Response:
-        """
-        Fetch package metadata from the registry.
-
-        Args:
-            package_name (str): The name of the package.
-
-        Returns:
-            requests.Response: The response object from the registry request.
-        """
         headers = {"Accept": self.content_type}
         url = f"{self.base_url}{package_name}"
         response = requests.get(url, headers=headers)
@@ -34,20 +24,7 @@ class PipAPI:
         return response
 
     def filter_versions_by_timestamp(self, package_data: dict, timestamp: int) -> dict:
-        """
-        Filter package versions by a given Unix timestamp and update package metadata.
-
-        Args:
-            package_data (dict): The package metadata to filter.
-            timestamp (int): The Unix timestamp to filter against.
-
-        Returns:
-            dict: Modified package data with filtered versions, updated time metadata,
-                  and dist-tags containing the latest available version.
-        """
         target_time = datetime.fromtimestamp(timestamp, tz=timezone.utc)
-
-        json.dump(package_data, fp=open("tmp/package_data_before_filter.json", "w"), indent=2)
 
         versions: list[str] = []
         files: list[dict] = []

@@ -2,7 +2,7 @@ import requests
 from datetime import datetime, timezone
 import logging
 import semver
-from endpoints.endpoint import parse_version, get_version_dict, fromisoformat, toisoformat
+from registries.utils import parse_version, get_version_dict, fromisoformat, toisoformat
 
 logger = logging.getLogger(__name__)
 
@@ -22,15 +22,6 @@ class NpmCompatibleAPI:
         )
 
     def fetch_package_metadata(self, package_name: str) -> requests.Response:
-        """
-        Fetch package metadata from the registry.
-
-        Args:
-            package_name (str): The name of the package.
-
-        Returns:
-            requests.Response: The response object from the registry request.
-        """
         response = requests.get(f"{self.base_url}{package_name}")
         if response.status_code != 200:
             logger.error(f"Failed to fetch package metadata for {package_name}")
@@ -39,17 +30,6 @@ class NpmCompatibleAPI:
     def build_dist_tags(
         self, original_dist_tags: dict[str, str], parsed_versions: list[semver.VersionInfo]
     ) -> dict[str, str]:
-        """
-        Build dist-tags based on the original dist-tags and the parsed versions.
-
-        If a dist-tag in the original dist-tags points to a version that is not in the parsed versions,
-        it will be updated to point to the latest available version in the parsed versions.
-
-        Args:
-            original_dist_tags (dict[str, str]): The original dist-tags from the package metadata.
-            parsed_versions (list[semver.VersionInfo]): The list of parsed versions.
-        """
-
         new_dist_tags = {}
 
         common_prerelease_keywords = ["beta", "alpha", "rc", "esm"]
@@ -88,17 +68,6 @@ class NpmCompatibleAPI:
         return new_dist_tags
 
     def filter_versions_by_timestamp(self, package_data: dict, timestamp: int) -> dict:
-        """
-        Filter package versions by a given Unix timestamp and update package metadata.
-
-        Args:
-            package_data (dict): The package metadata to filter.
-            timestamp (int): The Unix timestamp to filter against.
-
-        Returns:
-            dict: Modified package data with filtered versions, updated time metadata,
-                  and dist-tags containing the latest available version.
-        """
         target_time = datetime.fromtimestamp(timestamp, tz=timezone.utc)
 
         versions: dict[str, dict] = {}
@@ -106,9 +75,7 @@ class NpmCompatibleAPI:
         latest_time = None
 
         for version, publish_time in package_data.get("time", {}).items():
-
             if version not in package_data.get("versions", {}) or not isinstance(publish_time, str):
-                # Skip non-version entries like "modified" and "created", or unpublished versions without timestamps.
                 continue
 
             publish_time = fromisoformat(publish_time)

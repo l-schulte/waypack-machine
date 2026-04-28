@@ -1,2 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "waypack-machine"
+requires-python = ">=3.10"
+dependencies = [
+    "Flask==3.1.2",
+    "requests==2.32.5",
+    "semver==3.0.4",
+]
+
 [tool.black]
-line-length = 100
+line-length = 120
