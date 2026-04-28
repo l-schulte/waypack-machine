@@ -1,0 +1,256 @@
+#!/usr/bin/env python3
+"""
+Process all Git tags from the consensys-vertical-apps/metamask-institutional monorepo,
+repackage each workspace package as an npm-ready tarball, and output
+local_packages_output.json for the WayPack Machine local registry.
+
+Usage:
+    python raw_packages/process_mmi_tags.py /path/to/metamask-institutional-clone
+"""
+
+import argparse
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+WAYPACK_ROOT = Path(__file__).parent.parent
+LOCAL_PACKAGES_DIR = WAYPACK_ROOT / "local_packages"
+OUTPUT_JSON = WAYPACK_ROOT / "local_packages_output.json"
+REGISTRY_URL_BASE = "http://localhost:3000/local"
+
+# Packages whose directory name cannot be derived by simple kebab→camelCase conversion.
+CAMEL_OVERRIDES: dict[str, str] = {
+    "simplecache": "simpleCache",
+    "websocket-client": "websocketClient",
+}
+
+
+def kebab_to_camel(name: str) -> str:
+    if name in CAMEL_OVERRIDES:
+        return CAMEL_OVERRIDES[name]
+    parts = name.split("-")
+    return parts[0] + "".join(p.capitalize() for p in parts[1:])
+
+
+def parse_tag(tag: str) -> tuple[str, str] | None:
+    """
+    Return (kebab_package_name, version) for a valid release tag, else None.
+
+    Supported formats:
+      New: custody-controller-v0.2.22
+      Old: @metamask-institutional/custody-controller@0.1.4
+    """
+    # Old format: @metamask-institutional/<name>@<version>
+    m = re.match(r"^@metamask-institutional/(.+)@(\d+\.\d+\.\d+.*)$", tag)
+    if m:
+        return m.group(1), m.group(2)
+
+    # New format: <name>-v<version>
+    m = re.match(r"^(.+)-v(\d+\.\d+\.\d+.*)$", tag)
+    if m:
+        return m.group(1), m.group(2)
+
+    return None
+
+
+def get_all_tags(repo_path: Path) -> list[str]:
+    result = subprocess.run(
+        ["git", "tag"],
+        cwd=repo_path,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"git tag failed: {result.stderr.strip()}")
+    return [t.strip() for t in result.stdout.splitlines() if t.strip()]
+
+
+def get_tag_date(repo_path: Path, tag: str) -> str:
+    """
+    Return the ISO-8601 creation date of a tag (tagger date for annotated tags,
+    commit date for lightweight tags), always ending in 'Z'.
+    """
+    result = subprocess.run(
+        ["git", "for-each-ref", "--format=%(creatordate:iso-strict)", f"refs/tags/{tag}"],
+        cwd=repo_path,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0 or not result.stdout.strip():
+        raise RuntimeError(f"Could not read date for tag '{tag}': {result.stderr.strip()}")
+    date = result.stdout.strip()
+    # Normalise timezone suffix → Z
+    date = re.sub(r"\+00:00$", "Z", date)
+    return date
+
+
+def checkout_tag(repo_path: Path, tag: str) -> None:
+    result = subprocess.run(
+        ["git", "checkout", "--quiet", tag],
+        cwd=repo_path,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"git checkout '{tag}' failed: {result.stderr.strip()}")
+
+
+def run_npm_pack(package_dir: Path) -> Path:
+    """
+    Run `npm pack --ignore-scripts` in package_dir and return the path to the
+    produced tarball (inside package_dir).
+    """
+    result = subprocess.run(
+        ["npm", "pack", "--ignore-scripts"],
+        cwd=package_dir,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(
+            f"npm pack failed in {package_dir}:\n"
+            f"  stdout: {result.stdout.strip()}\n"
+            f"  stderr: {result.stderr.strip()}"
+        )
+    # npm pack prints the tarball filename on the last line of stdout
+    tarball_name = result.stdout.strip().splitlines()[-1].strip()
+    tarball_path = package_dir / tarball_name
+    if not tarball_path.exists():
+        raise RuntimeError(f"npm pack claimed to produce '{tarball_name}' but it was not found in {package_dir}")
+    return tarball_path
+
+
+def expected_tarball_name(npm_package_name: str, version: str) -> str:
+    """
+    Compute the canonical tarball filename for a scoped package.
+    @metamask-institutional/custody-controller 0.2.22
+      → metamask-institutional-custody-controller-0.2.22.tgz
+    """
+    bare = npm_package_name.lstrip("@").replace("/", "-")
+    return f"{bare}-{version}.tgz"
+
+
+def record_version(
+    output: dict,
+    npm_package_name: str,
+    version: str,
+    tarball_name: str,
+    tag_date: str,
+) -> None:
+    """Insert or update a version entry in the output dict (mutates in place)."""
+    pkg = output["versions"].setdefault(
+        npm_package_name,
+        {
+            "_id": npm_package_name,
+            "name": npm_package_name,
+            "versions": {},
+            "time": {"created": tag_date, "modified": tag_date},
+        },
+    )
+    pkg["versions"][version] = {
+        "version": version,
+        "name": npm_package_name,
+        "dist": {"tarball": f"{REGISTRY_URL_BASE}/{tarball_name}"},
+    }
+    pkg["time"][version] = tag_date
+    if tag_date > pkg["time"].get("modified", ""):
+        pkg["time"]["modified"] = tag_date
+
+
+def load_output() -> dict:
+    if OUTPUT_JSON.exists():
+        with open(OUTPUT_JSON) as f:
+            data = json.load(f)
+        if "versions" not in data:
+            data["versions"] = {}
+        return data
+    return {"versions": {}}
+
+
+def save_output(output: dict) -> None:
+    with open(OUTPUT_JSON, "w") as f:
+        json.dump(output, f, indent=4)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Repackage metamask-institutional monorepo tags as npm tarballs."
+    )
+    parser.add_argument(
+        "repo_path",
+        help="Path to the local clone of consensys-vertical-apps/metamask-institutional",
+    )
+    args = parser.parse_args()
+
+    repo_path = Path(args.repo_path).resolve()
+    if not (repo_path / ".git").exists():
+        print(f"ERROR: {repo_path} is not a git repository", file=sys.stderr)
+        sys.exit(1)
+
+    LOCAL_PACKAGES_DIR.mkdir(exist_ok=True)
+    output = load_output()
+
+    tags = get_all_tags(repo_path)
+    release_tags = [(tag, parse_tag(tag)) for tag in tags]
+    release_tags = [(tag, parsed) for tag, parsed in release_tags if parsed is not None]
+
+    print(f"Found {len(tags)} tags total, {len(release_tags)} are package release tags.")
+
+    processed = skipped = errors = 0
+
+    for tag, (kebab_name, version) in release_tags:
+        npm_package_name = f"@metamask-institutional/{kebab_name}"
+        camel_name = kebab_to_camel(kebab_name)
+        tarball_name = expected_tarball_name(npm_package_name, version)
+        dest_path = LOCAL_PACKAGES_DIR / tarball_name
+
+        if dest_path.exists():
+            # Tarball already present — make sure the JSON entry exists.
+            if version not in output["versions"].get(npm_package_name, {}).get("versions", {}):
+                try:
+                    tag_date = get_tag_date(repo_path, tag)
+                    record_version(output, npm_package_name, version, tarball_name, tag_date)
+                except Exception as exc:
+                    print(f"  WARN  {tag}: tarball exists but could not record JSON entry: {exc}", file=sys.stderr)
+            else:
+                print(f"  SKIP  {tag} — already done")
+            skipped += 1
+            continue
+
+        print(f"  PACK  {tag} → {tarball_name}")
+        try:
+            package_dir = repo_path / "packages" / camel_name
+
+            checkout_tag(repo_path, tag)
+
+            if not package_dir.exists():
+                raise RuntimeError(
+                    f"Package directory 'packages/{camel_name}' not found after checkout of '{tag}'. "
+                    f"You may need to add '{kebab_name}' to CAMEL_OVERRIDES."
+                )
+
+            tag_date = get_tag_date(repo_path, tag)
+            tarball_path = run_npm_pack(package_dir)
+            shutil.move(str(tarball_path), str(dest_path))
+            record_version(output, npm_package_name, version, tarball_name, tag_date)
+            processed += 1
+
+        except Exception as exc:
+            print(f"  ERROR {tag}: {exc}", file=sys.stderr)
+            errors += 1
+
+    save_output(output)
+    print(
+        f"\nDone — processed: {processed}, skipped: {skipped}, errors: {errors}\n"
+        f"Output: {OUTPUT_JSON}"
+    )
+    if errors:
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,3000 @@
+{
+    "versions": {
+        "@metamask-institutional/configuration-client": {
+            "_id": "@metamask-institutional/configuration-client",
+            "name": "@metamask-institutional/configuration-client",
+            "versions": {
+                "0.1.5": {
+                    "version": "0.1.5",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-0.1.5.tgz"
+                    }
+                },
+                "0.1.6": {
+                    "version": "0.1.6",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-0.1.6.tgz"
+                    }
+                },
+                "0.1.7": {
+                    "version": "0.1.7",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-0.1.7.tgz"
+                    }
+                },
+                "0.1.8": {
+                    "version": "0.1.8",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-0.1.8.tgz"
+                    }
+                },
+                "1.0.4": {
+                    "version": "1.0.4",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-1.0.4.tgz"
+                    }
+                },
+                "1.0.0": {
+                    "version": "1.0.0",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-1.0.0.tgz"
+                    }
+                },
+                "1.0.1": {
+                    "version": "1.0.1",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-1.0.1.tgz"
+                    }
+                },
+                "1.0.2": {
+                    "version": "1.0.2",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-1.0.2.tgz"
+                    }
+                },
+                "1.0.3": {
+                    "version": "1.0.3",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-1.0.3.tgz"
+                    }
+                },
+                "1.0.5": {
+                    "version": "1.0.5",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-1.0.5.tgz"
+                    }
+                },
+                "1.0.6": {
+                    "version": "1.0.6",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-1.0.6.tgz"
+                    }
+                },
+                "2.0.0": {
+                    "version": "2.0.0",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-2.0.0.tgz"
+                    }
+                },
+                "2.0.1": {
+                    "version": "2.0.1",
+                    "name": "@metamask-institutional/configuration-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-configuration-client-2.0.1.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-01-25T10:54:30Z",
+                "modified": "2023-10-20T14:43:34+01:00",
+                "0.1.5": "2023-01-25T10:54:30Z",
+                "0.1.6": "2023-01-26T10:02:52Z",
+                "0.1.7": "2023-01-27T13:06:30Z",
+                "0.1.8": "2023-02-01T15:31:48Z",
+                "1.0.4": "2023-02-02T12:06:22Z",
+                "1.0.0": "2023-02-02T11:48:26+01:00",
+                "1.0.1": "2023-02-02T12:15:27+01:00",
+                "1.0.2": "2023-02-02T12:25:59+01:00",
+                "1.0.3": "2023-02-02T13:04:53+01:00",
+                "1.0.5": "2023-04-20T13:43:31+01:00",
+                "1.0.6": "2023-05-15T13:12:58+01:00",
+                "2.0.0": "2023-09-18T10:57:19+01:00",
+                "2.0.1": "2023-10-20T14:43:34+01:00"
+            }
+        },
+        "@metamask-institutional/custody-controller": {
+            "_id": "@metamask-institutional/custody-controller",
+            "name": "@metamask-institutional/custody-controller",
+            "versions": {
+                "0.1.13": {
+                    "version": "0.1.13",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.13.tgz"
+                    }
+                },
+                "0.1.4": {
+                    "version": "0.1.4",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.4.tgz"
+                    }
+                },
+                "0.1.5": {
+                    "version": "0.1.5",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.5.tgz"
+                    }
+                },
+                "0.1.6": {
+                    "version": "0.1.6",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.6.tgz"
+                    }
+                },
+                "0.1.7": {
+                    "version": "0.1.7",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.7.tgz"
+                    }
+                },
+                "0.1.8": {
+                    "version": "0.1.8",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.8.tgz"
+                    }
+                },
+                "0.1.10": {
+                    "version": "0.1.10",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.10.tgz"
+                    }
+                },
+                "0.1.11": {
+                    "version": "0.1.11",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.11.tgz"
+                    }
+                },
+                "0.1.12": {
+                    "version": "0.1.12",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.12.tgz"
+                    }
+                },
+                "0.1.14": {
+                    "version": "0.1.14",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.14.tgz"
+                    }
+                },
+                "0.1.15": {
+                    "version": "0.1.15",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.15.tgz"
+                    }
+                },
+                "0.1.9": {
+                    "version": "0.1.9",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.1.9.tgz"
+                    }
+                },
+                "0.2.0": {
+                    "version": "0.2.0",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.0.tgz"
+                    }
+                },
+                "0.2.1": {
+                    "version": "0.2.1",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.1.tgz"
+                    }
+                },
+                "0.2.10": {
+                    "version": "0.2.10",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.10.tgz"
+                    }
+                },
+                "0.2.11": {
+                    "version": "0.2.11",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.11.tgz"
+                    }
+                },
+                "0.2.12": {
+                    "version": "0.2.12",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.12.tgz"
+                    }
+                },
+                "0.2.13": {
+                    "version": "0.2.13",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.13.tgz"
+                    }
+                },
+                "0.2.14": {
+                    "version": "0.2.14",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.14.tgz"
+                    }
+                },
+                "0.2.15": {
+                    "version": "0.2.15",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.15.tgz"
+                    }
+                },
+                "0.2.16": {
+                    "version": "0.2.16",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.16.tgz"
+                    }
+                },
+                "0.2.17": {
+                    "version": "0.2.17",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.17.tgz"
+                    }
+                },
+                "0.2.18": {
+                    "version": "0.2.18",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.18.tgz"
+                    }
+                },
+                "0.2.19": {
+                    "version": "0.2.19",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.19.tgz"
+                    }
+                },
+                "0.2.2": {
+                    "version": "0.2.2",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.2.tgz"
+                    }
+                },
+                "0.2.20": {
+                    "version": "0.2.20",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.20.tgz"
+                    }
+                },
+                "0.2.21": {
+                    "version": "0.2.21",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.21.tgz"
+                    }
+                },
+                "0.2.22": {
+                    "version": "0.2.22",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.22.tgz"
+                    }
+                },
+                "0.2.23": {
+                    "version": "0.2.23",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.23.tgz"
+                    }
+                },
+                "0.2.24": {
+                    "version": "0.2.24",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.24.tgz"
+                    }
+                },
+                "0.2.25": {
+                    "version": "0.2.25",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.25.tgz"
+                    }
+                },
+                "0.2.26": {
+                    "version": "0.2.26",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.26.tgz"
+                    }
+                },
+                "0.2.27": {
+                    "version": "0.2.27",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.27.tgz"
+                    }
+                },
+                "0.2.28": {
+                    "version": "0.2.28",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.28.tgz"
+                    }
+                },
+                "0.2.29": {
+                    "version": "0.2.29",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.29.tgz"
+                    }
+                },
+                "0.2.3": {
+                    "version": "0.2.3",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.3.tgz"
+                    }
+                },
+                "0.2.30": {
+                    "version": "0.2.30",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.30.tgz"
+                    }
+                },
+                "0.2.4": {
+                    "version": "0.2.4",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.4.tgz"
+                    }
+                },
+                "0.2.5": {
+                    "version": "0.2.5",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.5.tgz"
+                    }
+                },
+                "0.2.6": {
+                    "version": "0.2.6",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.6.tgz"
+                    }
+                },
+                "0.2.7": {
+                    "version": "0.2.7",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.7.tgz"
+                    }
+                },
+                "0.2.8": {
+                    "version": "0.2.8",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.8.tgz"
+                    }
+                },
+                "0.2.9": {
+                    "version": "0.2.9",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.2.9.tgz"
+                    }
+                },
+                "0.3.0": {
+                    "version": "0.3.0",
+                    "name": "@metamask-institutional/custody-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-controller-0.3.0.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-02-02T12:06:22Z",
+                "modified": "2024-10-15T10:32:00+02:00",
+                "0.1.13": "2023-02-02T12:06:22Z",
+                "0.1.4": "2023-01-26T10:02:52Z",
+                "0.1.5": "2023-01-27T13:06:30Z",
+                "0.1.6": "2023-01-31T13:13:09Z",
+                "0.1.7": "2023-02-01T10:36:56+01:00",
+                "0.1.8": "2023-02-01T15:31:48Z",
+                "0.1.10": "2023-02-02T12:15:27+01:00",
+                "0.1.11": "2023-02-02T12:25:59+01:00",
+                "0.1.12": "2023-02-02T13:04:53+01:00",
+                "0.1.14": "2023-02-02T13:26:40+01:00",
+                "0.1.15": "2023-02-02T15:26:13Z",
+                "0.1.9": "2023-02-02T11:48:26+01:00",
+                "0.2.0": "2023-02-14T10:16:09+01:00",
+                "0.2.1": "2023-02-15T10:50:55+01:00",
+                "0.2.10": "2023-08-21T14:15:05+02:00",
+                "0.2.11": "2023-09-18T10:57:19+01:00",
+                "0.2.12": "2023-09-18T12:25:13+01:00",
+                "0.2.13": "2023-09-21T12:07:32+01:00",
+                "0.2.14": "2023-10-03T11:44:53+01:00",
+                "0.2.15": "2023-10-12T11:40:07+01:00",
+                "0.2.16": "2023-10-20T14:43:34+01:00",
+                "0.2.17": "2023-11-07T16:40:36Z",
+                "0.2.18": "2023-11-08T17:20:09Z",
+                "0.2.19": "2024-01-23T15:47:51Z",
+                "0.2.2": "2023-02-15T17:33:36+01:00",
+                "0.2.20": "2024-02-08T15:27:01Z",
+                "0.2.21": "2024-02-13T12:20:45Z",
+                "0.2.22": "2024-02-20T16:00:15+01:00",
+                "0.2.23": "2024-04-03T16:02:03+01:00",
+                "0.2.24": "2024-04-05T14:46:46+01:00",
+                "0.2.25": "2024-04-17T14:28:58+02:00",
+                "0.2.26": "2024-05-15T20:38:11+02:00",
+                "0.2.27": "2024-05-17T10:36:08+01:00",
+                "0.2.28": "2024-05-29T13:43:40+01:00",
+                "0.2.29": "2024-06-25T11:34:17+01:00",
+                "0.2.3": "2023-04-20T13:43:31+01:00",
+                "0.2.30": "2024-06-25T11:37:59+01:00",
+                "0.2.4": "2023-05-13T12:15:23+01:00",
+                "0.2.5": "2023-05-15T13:12:58+01:00",
+                "0.2.6": "2023-05-17T13:27:23+02:00",
+                "0.2.7": "2023-05-25T11:33:20+01:00",
+                "0.2.8": "2023-06-27T16:19:31+01:00",
+                "0.2.9": "2023-07-19T17:29:42+01:00",
+                "0.3.0": "2024-10-15T10:32:00+02:00"
+            }
+        },
+        "@metamask-institutional/custody-keyring": {
+            "_id": "@metamask-institutional/custody-keyring",
+            "name": "@metamask-institutional/custody-keyring",
+            "versions": {
+                "0.0.10": {
+                    "version": "0.0.10",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.10.tgz"
+                    }
+                },
+                "0.0.15": {
+                    "version": "0.0.15",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.15.tgz"
+                    }
+                },
+                "0.0.2": {
+                    "version": "0.0.2",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.2.tgz"
+                    }
+                },
+                "0.0.3": {
+                    "version": "0.0.3",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.3.tgz"
+                    }
+                },
+                "0.0.4": {
+                    "version": "0.0.4",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.4.tgz"
+                    }
+                },
+                "0.0.5": {
+                    "version": "0.0.5",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.5.tgz"
+                    }
+                },
+                "0.0.6": {
+                    "version": "0.0.6",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.6.tgz"
+                    }
+                },
+                "0.0.7": {
+                    "version": "0.0.7",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.7.tgz"
+                    }
+                },
+                "0.0.8": {
+                    "version": "0.0.8",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.8.tgz"
+                    }
+                },
+                "0.0.9": {
+                    "version": "0.0.9",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.9.tgz"
+                    }
+                },
+                "0.0.11": {
+                    "version": "0.0.11",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.11.tgz"
+                    }
+                },
+                "0.0.12": {
+                    "version": "0.0.12",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.12.tgz"
+                    }
+                },
+                "0.0.13": {
+                    "version": "0.0.13",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.13.tgz"
+                    }
+                },
+                "0.0.14": {
+                    "version": "0.0.14",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.14.tgz"
+                    }
+                },
+                "0.0.16": {
+                    "version": "0.0.16",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.16.tgz"
+                    }
+                },
+                "0.0.17": {
+                    "version": "0.0.17",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.17.tgz"
+                    }
+                },
+                "0.0.18": {
+                    "version": "0.0.18",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.18.tgz"
+                    }
+                },
+                "0.0.19": {
+                    "version": "0.0.19",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.19.tgz"
+                    }
+                },
+                "0.0.20": {
+                    "version": "0.0.20",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.20.tgz"
+                    }
+                },
+                "0.0.21": {
+                    "version": "0.0.21",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.21.tgz"
+                    }
+                },
+                "0.0.22": {
+                    "version": "0.0.22",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.22.tgz"
+                    }
+                },
+                "0.0.24": {
+                    "version": "0.0.24",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.24.tgz"
+                    }
+                },
+                "0.0.25": {
+                    "version": "0.0.25",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.25.tgz"
+                    }
+                },
+                "0.0.26": {
+                    "version": "0.0.26",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.26.tgz"
+                    }
+                },
+                "0.0.27": {
+                    "version": "0.0.27",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-0.0.27.tgz"
+                    }
+                },
+                "1.0.0": {
+                    "version": "1.0.0",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.0.tgz"
+                    }
+                },
+                "1.0.1": {
+                    "version": "1.0.1",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.1.tgz"
+                    }
+                },
+                "1.0.10": {
+                    "version": "1.0.10",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.10.tgz"
+                    }
+                },
+                "1.0.11": {
+                    "version": "1.0.11",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.11.tgz"
+                    }
+                },
+                "1.0.12": {
+                    "version": "1.0.12",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.12.tgz"
+                    }
+                },
+                "1.0.2": {
+                    "version": "1.0.2",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.2.tgz"
+                    }
+                },
+                "1.0.3": {
+                    "version": "1.0.3",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.3.tgz"
+                    }
+                },
+                "1.0.4": {
+                    "version": "1.0.4",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.4.tgz"
+                    }
+                },
+                "1.0.5": {
+                    "version": "1.0.5",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.5.tgz"
+                    }
+                },
+                "1.0.6": {
+                    "version": "1.0.6",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.6.tgz"
+                    }
+                },
+                "1.0.7": {
+                    "version": "1.0.7",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.7.tgz"
+                    }
+                },
+                "1.0.8": {
+                    "version": "1.0.8",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.8.tgz"
+                    }
+                },
+                "1.0.9": {
+                    "version": "1.0.9",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.0.9.tgz"
+                    }
+                },
+                "1.1.0": {
+                    "version": "1.1.0",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.1.0.tgz"
+                    }
+                },
+                "1.1.1": {
+                    "version": "1.1.1",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-1.1.1.tgz"
+                    }
+                },
+                "2.0.0": {
+                    "version": "2.0.0",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-2.0.0.tgz"
+                    }
+                },
+                "2.0.1": {
+                    "version": "2.0.1",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-2.0.1.tgz"
+                    }
+                },
+                "2.0.2": {
+                    "version": "2.0.2",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-2.0.2.tgz"
+                    }
+                },
+                "2.0.3": {
+                    "version": "2.0.3",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-2.0.3.tgz"
+                    }
+                },
+                "2.1.0": {
+                    "version": "2.1.0",
+                    "name": "@metamask-institutional/custody-keyring",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-custody-keyring-2.1.0.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-02-01T15:31:48Z",
+                "modified": "2024-10-15T10:32:00+02:00",
+                "0.0.10": "2023-02-01T15:31:48Z",
+                "0.0.15": "2023-02-02T12:06:22Z",
+                "0.0.2": "2023-01-24T10:48:22Z",
+                "0.0.3": "2023-01-24T15:47:57Z",
+                "0.0.4": "2023-01-25T10:34:34Z",
+                "0.0.5": "2023-01-25T10:54:30Z",
+                "0.0.6": "2023-01-26T10:02:52Z",
+                "0.0.7": "2023-01-27T13:06:30Z",
+                "0.0.8": "2023-01-31T13:13:09Z",
+                "0.0.9": "2023-02-01T10:36:56+01:00",
+                "0.0.11": "2023-02-02T11:48:26+01:00",
+                "0.0.12": "2023-02-02T12:15:27+01:00",
+                "0.0.13": "2023-02-02T12:25:59+01:00",
+                "0.0.14": "2023-02-02T13:04:53+01:00",
+                "0.0.16": "2023-02-02T13:26:40+01:00",
+                "0.0.17": "2023-02-02T15:26:13Z",
+                "0.0.18": "2023-02-15T17:33:36+01:00",
+                "0.0.19": "2023-04-20T13:43:31+01:00",
+                "0.0.20": "2023-05-13T12:15:23+01:00",
+                "0.0.21": "2023-05-15T13:12:58+01:00",
+                "0.0.22": "2023-05-17T13:27:23+02:00",
+                "0.0.24": "2023-05-25T11:33:20+01:00",
+                "0.0.25": "2023-06-27T16:19:31+01:00",
+                "0.0.26": "2023-07-19T17:29:42+01:00",
+                "0.0.27": "2023-08-21T14:15:05+02:00",
+                "1.0.0": "2023-09-18T10:57:19+01:00",
+                "1.0.1": "2023-09-18T12:25:13+01:00",
+                "1.0.10": "2024-02-13T12:20:45Z",
+                "1.0.11": "2024-04-03T16:02:03+01:00",
+                "1.0.12": "2024-04-05T14:46:46+01:00",
+                "1.0.2": "2023-09-21T12:07:32+01:00",
+                "1.0.3": "2023-10-03T11:44:53+01:00",
+                "1.0.4": "2023-10-12T11:40:07+01:00",
+                "1.0.5": "2023-10-20T14:43:34+01:00",
+                "1.0.6": "2023-11-07T16:40:36Z",
+                "1.0.7": "2023-11-08T17:20:09Z",
+                "1.0.8": "2024-01-23T15:47:51Z",
+                "1.0.9": "2024-02-08T15:27:01Z",
+                "1.1.0": "2024-04-17T14:28:58+02:00",
+                "1.1.1": "2024-05-15T20:38:11+02:00",
+                "2.0.0": "2024-05-17T10:36:08+01:00",
+                "2.0.1": "2024-05-29T13:43:40+01:00",
+                "2.0.2": "2024-06-25T11:34:17+01:00",
+                "2.0.3": "2024-06-25T11:37:59+01:00",
+                "2.1.0": "2024-10-15T10:32:00+02:00"
+            }
+        },
+        "@metamask-institutional/institutional-features": {
+            "_id": "@metamask-institutional/institutional-features",
+            "name": "@metamask-institutional/institutional-features",
+            "versions": {
+                "0.1.0": {
+                    "version": "0.1.0",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-0.1.0.tgz"
+                    }
+                },
+                "0.1.1": {
+                    "version": "0.1.1",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-0.1.1.tgz"
+                    }
+                },
+                "1.0.1": {
+                    "version": "1.0.1",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.0.1.tgz"
+                    }
+                },
+                "1.1.1": {
+                    "version": "1.1.1",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.1.tgz"
+                    }
+                },
+                "1.0.0": {
+                    "version": "1.0.0",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.0.0.tgz"
+                    }
+                },
+                "1.0.2": {
+                    "version": "1.0.2",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.0.2.tgz"
+                    }
+                },
+                "1.0.3": {
+                    "version": "1.0.3",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.0.3.tgz"
+                    }
+                },
+                "1.0.4": {
+                    "version": "1.0.4",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.0.4.tgz"
+                    }
+                },
+                "1.1.0": {
+                    "version": "1.1.0",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.0.tgz"
+                    }
+                },
+                "1.1.10": {
+                    "version": "1.1.10",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.10.tgz"
+                    }
+                },
+                "1.1.2": {
+                    "version": "1.1.2",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.2.tgz"
+                    }
+                },
+                "1.1.3": {
+                    "version": "1.1.3",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.3.tgz"
+                    }
+                },
+                "1.1.4": {
+                    "version": "1.1.4",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.4.tgz"
+                    }
+                },
+                "1.1.5": {
+                    "version": "1.1.5",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.5.tgz"
+                    }
+                },
+                "1.1.6": {
+                    "version": "1.1.6",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.6.tgz"
+                    }
+                },
+                "1.1.7": {
+                    "version": "1.1.7",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.7.tgz"
+                    }
+                },
+                "1.1.8": {
+                    "version": "1.1.8",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.8.tgz"
+                    }
+                },
+                "1.1.9": {
+                    "version": "1.1.9",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.1.9.tgz"
+                    }
+                },
+                "1.2.0": {
+                    "version": "1.2.0",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.0.tgz"
+                    }
+                },
+                "1.2.1": {
+                    "version": "1.2.1",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.1.tgz"
+                    }
+                },
+                "1.2.10": {
+                    "version": "1.2.10",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.10.tgz"
+                    }
+                },
+                "1.2.11": {
+                    "version": "1.2.11",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.11.tgz"
+                    }
+                },
+                "1.2.12": {
+                    "version": "1.2.12",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.12.tgz"
+                    }
+                },
+                "1.2.13": {
+                    "version": "1.2.13",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.13.tgz"
+                    }
+                },
+                "1.2.14": {
+                    "version": "1.2.14",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.14.tgz"
+                    }
+                },
+                "1.2.15": {
+                    "version": "1.2.15",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.15.tgz"
+                    }
+                },
+                "1.2.2": {
+                    "version": "1.2.2",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.2.tgz"
+                    }
+                },
+                "1.2.3": {
+                    "version": "1.2.3",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.3.tgz"
+                    }
+                },
+                "1.2.4": {
+                    "version": "1.2.4",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.4.tgz"
+                    }
+                },
+                "1.2.5": {
+                    "version": "1.2.5",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.5.tgz"
+                    }
+                },
+                "1.2.6": {
+                    "version": "1.2.6",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.6.tgz"
+                    }
+                },
+                "1.2.7": {
+                    "version": "1.2.7",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.7.tgz"
+                    }
+                },
+                "1.2.8": {
+                    "version": "1.2.8",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.8.tgz"
+                    }
+                },
+                "1.2.9": {
+                    "version": "1.2.9",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.2.9.tgz"
+                    }
+                },
+                "1.3.0": {
+                    "version": "1.3.0",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.3.0.tgz"
+                    }
+                },
+                "1.3.1": {
+                    "version": "1.3.1",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.3.1.tgz"
+                    }
+                },
+                "1.3.2": {
+                    "version": "1.3.2",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.3.2.tgz"
+                    }
+                },
+                "1.3.3": {
+                    "version": "1.3.3",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.3.3.tgz"
+                    }
+                },
+                "1.3.4": {
+                    "version": "1.3.4",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.3.4.tgz"
+                    }
+                },
+                "1.3.5": {
+                    "version": "1.3.5",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.3.5.tgz"
+                    }
+                },
+                "1.3.6": {
+                    "version": "1.3.6",
+                    "name": "@metamask-institutional/institutional-features",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-institutional-features-1.3.6.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-01-31T13:13:09Z",
+                "modified": "2024-10-15T10:32:00+02:00",
+                "0.1.0": "2023-01-31T13:13:09Z",
+                "0.1.1": "2023-02-01T10:36:56+01:00",
+                "1.0.1": "2023-02-01T15:31:48Z",
+                "1.1.1": "2023-02-02T12:06:22Z",
+                "1.0.0": "2023-02-01T15:12:20+01:00",
+                "1.0.2": "2023-02-02T11:48:26+01:00",
+                "1.0.3": "2023-02-02T12:15:27+01:00",
+                "1.0.4": "2023-02-02T12:25:59+01:00",
+                "1.1.0": "2023-02-02T13:04:53+01:00",
+                "1.1.10": "2023-06-27T16:19:31+01:00",
+                "1.1.2": "2023-02-02T13:26:40+01:00",
+                "1.1.3": "2023-02-02T15:26:13Z",
+                "1.1.4": "2023-02-15T17:33:36+01:00",
+                "1.1.5": "2023-04-20T13:43:31+01:00",
+                "1.1.6": "2023-05-13T12:15:23+01:00",
+                "1.1.7": "2023-05-15T13:12:58+01:00",
+                "1.1.8": "2023-05-17T13:27:23+02:00",
+                "1.1.9": "2023-05-25T11:33:20+01:00",
+                "1.2.0": "2023-07-19T18:15:53+02:00",
+                "1.2.1": "2023-07-19T17:29:42+01:00",
+                "1.2.10": "2023-11-08T17:20:09Z",
+                "1.2.11": "2024-01-23T15:47:51Z",
+                "1.2.12": "2024-02-08T15:27:01Z",
+                "1.2.13": "2024-02-13T12:20:45Z",
+                "1.2.14": "2024-04-03T16:02:03+01:00",
+                "1.2.15": "2024-04-05T14:46:46+01:00",
+                "1.2.2": "2023-08-21T14:15:05+02:00",
+                "1.2.3": "2023-09-18T10:57:19+01:00",
+                "1.2.4": "2023-09-18T12:25:13+01:00",
+                "1.2.5": "2023-09-21T12:07:32+01:00",
+                "1.2.6": "2023-10-03T11:44:53+01:00",
+                "1.2.7": "2023-10-12T11:40:07+01:00",
+                "1.2.8": "2023-10-20T14:43:34+01:00",
+                "1.2.9": "2023-11-07T16:40:36Z",
+                "1.3.0": "2024-04-17T14:28:58+02:00",
+                "1.3.1": "2024-05-15T20:38:11+02:00",
+                "1.3.2": "2024-05-17T10:36:08+01:00",
+                "1.3.3": "2024-05-29T13:43:40+01:00",
+                "1.3.4": "2024-06-25T11:34:17+01:00",
+                "1.3.5": "2024-06-25T11:37:59+01:00",
+                "1.3.6": "2024-10-15T10:32:00+02:00"
+            }
+        },
+        "@metamask-institutional/mmi-configuration": {
+            "_id": "@metamask-institutional/mmi-configuration",
+            "name": "@metamask-institutional/mmi-configuration",
+            "versions": {
+                "0.1.3": {
+                    "version": "0.1.3",
+                    "name": "@metamask-institutional/mmi-configuration",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-mmi-configuration-0.1.3.tgz"
+                    }
+                },
+                "0.1.4": {
+                    "version": "0.1.4",
+                    "name": "@metamask-institutional/mmi-configuration",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-mmi-configuration-0.1.4.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-01-23T17:56:04Z",
+                "modified": "2023-01-24T10:48:22Z",
+                "0.1.3": "2023-01-23T17:56:04Z",
+                "0.1.4": "2023-01-24T10:48:22Z"
+            }
+        },
+        "@metamask-institutional/portfolio-dashboard": {
+            "_id": "@metamask-institutional/portfolio-dashboard",
+            "name": "@metamask-institutional/portfolio-dashboard",
+            "versions": {
+                "0.1.1": {
+                    "version": "0.1.1",
+                    "name": "@metamask-institutional/portfolio-dashboard",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-portfolio-dashboard-0.1.1.tgz"
+                    }
+                },
+                "0.1.2": {
+                    "version": "0.1.2",
+                    "name": "@metamask-institutional/portfolio-dashboard",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-portfolio-dashboard-0.1.2.tgz"
+                    }
+                },
+                "0.1.3": {
+                    "version": "0.1.3",
+                    "name": "@metamask-institutional/portfolio-dashboard",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-portfolio-dashboard-0.1.3.tgz"
+                    }
+                },
+                "1.0.0": {
+                    "version": "1.0.0",
+                    "name": "@metamask-institutional/portfolio-dashboard",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-portfolio-dashboard-1.0.0.tgz"
+                    }
+                },
+                "1.1.0": {
+                    "version": "1.1.0",
+                    "name": "@metamask-institutional/portfolio-dashboard",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-portfolio-dashboard-1.1.0.tgz"
+                    }
+                },
+                "1.1.1": {
+                    "version": "1.1.1",
+                    "name": "@metamask-institutional/portfolio-dashboard",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-portfolio-dashboard-1.1.1.tgz"
+                    }
+                },
+                "1.1.2": {
+                    "version": "1.1.2",
+                    "name": "@metamask-institutional/portfolio-dashboard",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-portfolio-dashboard-1.1.2.tgz"
+                    }
+                },
+                "1.2.0": {
+                    "version": "1.2.0",
+                    "name": "@metamask-institutional/portfolio-dashboard",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-portfolio-dashboard-1.2.0.tgz"
+                    }
+                },
+                "1.4.0": {
+                    "version": "1.4.0",
+                    "name": "@metamask-institutional/portfolio-dashboard",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-portfolio-dashboard-1.4.0.tgz"
+                    }
+                },
+                "1.4.1": {
+                    "version": "1.4.1",
+                    "name": "@metamask-institutional/portfolio-dashboard",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-portfolio-dashboard-1.4.1.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-01-31T15:03:21Z",
+                "modified": "2024-05-06T15:52:49+01:00",
+                "0.1.1": "2023-01-31T15:03:21Z",
+                "0.1.2": "2023-02-01T15:31:48Z",
+                "0.1.3": "2023-02-02T12:06:22Z",
+                "1.0.0": "2023-02-02T14:56:48Z",
+                "1.1.0": "2023-02-07T16:41:29+01:00",
+                "1.1.1": "2023-03-23T10:36:58+01:00",
+                "1.1.2": "2023-05-15T13:12:58+01:00",
+                "1.2.0": "2023-05-25T11:33:20+01:00",
+                "1.4.0": "2023-06-05T14:46:45+01:00",
+                "1.4.1": "2024-05-06T15:52:49+01:00"
+            }
+        },
+        "@metamask-institutional/rpc-allowlist": {
+            "_id": "@metamask-institutional/rpc-allowlist",
+            "name": "@metamask-institutional/rpc-allowlist",
+            "versions": {
+                "0.1.1": {
+                    "version": "0.1.1",
+                    "name": "@metamask-institutional/rpc-allowlist",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-rpc-allowlist-0.1.1.tgz"
+                    }
+                },
+                "1.0.0": {
+                    "version": "1.0.0",
+                    "name": "@metamask-institutional/rpc-allowlist",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-rpc-allowlist-1.0.0.tgz"
+                    }
+                },
+                "1.0.1": {
+                    "version": "1.0.1",
+                    "name": "@metamask-institutional/rpc-allowlist",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-rpc-allowlist-1.0.1.tgz"
+                    }
+                },
+                "1.0.2": {
+                    "version": "1.0.2",
+                    "name": "@metamask-institutional/rpc-allowlist",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-rpc-allowlist-1.0.2.tgz"
+                    }
+                },
+                "1.0.3": {
+                    "version": "1.0.3",
+                    "name": "@metamask-institutional/rpc-allowlist",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-rpc-allowlist-1.0.3.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-01-31T14:38:17Z",
+                "modified": "2024-04-16T19:17:23+01:00",
+                "0.1.1": "2023-01-31T14:38:17Z",
+                "1.0.0": "2023-05-15T13:12:58+01:00",
+                "1.0.1": "2024-03-21T15:16:42Z",
+                "1.0.2": "2024-04-16T18:22:41+01:00",
+                "1.0.3": "2024-04-16T19:17:23+01:00"
+            }
+        },
+        "@metamask-institutional/sdk": {
+            "_id": "@metamask-institutional/sdk",
+            "name": "@metamask-institutional/sdk",
+            "versions": {
+                "0.1.1": {
+                    "version": "0.1.1",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.1.tgz"
+                    }
+                },
+                "0.1.10": {
+                    "version": "0.1.10",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.10.tgz"
+                    }
+                },
+                "0.1.11": {
+                    "version": "0.1.11",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.11.tgz"
+                    }
+                },
+                "0.1.12": {
+                    "version": "0.1.12",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.12.tgz"
+                    }
+                },
+                "0.1.13": {
+                    "version": "0.1.13",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.13.tgz"
+                    }
+                },
+                "0.1.2": {
+                    "version": "0.1.2",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.2.tgz"
+                    }
+                },
+                "0.1.3": {
+                    "version": "0.1.3",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.3.tgz"
+                    }
+                },
+                "0.1.4": {
+                    "version": "0.1.4",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.4.tgz"
+                    }
+                },
+                "0.1.5": {
+                    "version": "0.1.5",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.5.tgz"
+                    }
+                },
+                "0.1.6": {
+                    "version": "0.1.6",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.6.tgz"
+                    }
+                },
+                "0.1.7": {
+                    "version": "0.1.7",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.7.tgz"
+                    }
+                },
+                "0.1.8": {
+                    "version": "0.1.8",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.8.tgz"
+                    }
+                },
+                "0.1.9": {
+                    "version": "0.1.9",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.9.tgz"
+                    }
+                },
+                "0.1.14": {
+                    "version": "0.1.14",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.14.tgz"
+                    }
+                },
+                "0.1.15": {
+                    "version": "0.1.15",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.15.tgz"
+                    }
+                },
+                "0.1.18": {
+                    "version": "0.1.18",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.18.tgz"
+                    }
+                },
+                "0.1.19": {
+                    "version": "0.1.19",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.19.tgz"
+                    }
+                },
+                "0.1.20": {
+                    "version": "0.1.20",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.20.tgz"
+                    }
+                },
+                "0.1.21": {
+                    "version": "0.1.21",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.21.tgz"
+                    }
+                },
+                "0.1.22": {
+                    "version": "0.1.22",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.22.tgz"
+                    }
+                },
+                "0.1.23": {
+                    "version": "0.1.23",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.23.tgz"
+                    }
+                },
+                "0.1.24": {
+                    "version": "0.1.24",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.24.tgz"
+                    }
+                },
+                "0.1.25": {
+                    "version": "0.1.25",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.25.tgz"
+                    }
+                },
+                "0.1.26": {
+                    "version": "0.1.26",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.26.tgz"
+                    }
+                },
+                "0.1.27": {
+                    "version": "0.1.27",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.27.tgz"
+                    }
+                },
+                "0.1.28": {
+                    "version": "0.1.28",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.28.tgz"
+                    }
+                },
+                "0.1.30": {
+                    "version": "0.1.30",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.1.30.tgz"
+                    }
+                },
+                "0.2.0": {
+                    "version": "0.2.0",
+                    "name": "@metamask-institutional/sdk",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-sdk-0.2.0.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-01-20T12:53:57Z",
+                "modified": "2024-10-15T10:32:00+02:00",
+                "0.1.1": "2023-01-20T12:53:57Z",
+                "0.1.10": "2023-01-31T13:13:09Z",
+                "0.1.11": "2023-02-01T10:36:56+01:00",
+                "0.1.12": "2023-02-01T15:31:48Z",
+                "0.1.13": "2023-02-02T12:06:22Z",
+                "0.1.2": "2023-01-20T14:34:34Z",
+                "0.1.3": "2023-01-20T16:48:50Z",
+                "0.1.4": "2023-01-23T15:30:28Z",
+                "0.1.5": "2023-01-24T10:48:22Z",
+                "0.1.6": "2023-01-25T10:34:34Z",
+                "0.1.7": "2023-01-25T10:54:30Z",
+                "0.1.8": "2023-01-26T10:02:52Z",
+                "0.1.9": "2023-01-27T13:06:30Z",
+                "0.1.14": "2023-05-15T13:12:58+01:00",
+                "0.1.15": "2023-05-17T13:27:23+02:00",
+                "0.1.18": "2023-05-25T11:33:20+01:00",
+                "0.1.19": "2023-10-03T11:44:53+01:00",
+                "0.1.20": "2023-10-12T11:40:07+01:00",
+                "0.1.21": "2023-10-20T14:43:34+01:00",
+                "0.1.22": "2023-11-07T16:40:36Z",
+                "0.1.23": "2023-11-08T17:20:09Z",
+                "0.1.24": "2024-01-23T15:47:51Z",
+                "0.1.25": "2024-04-03T16:02:03+01:00",
+                "0.1.26": "2024-04-17T14:28:58+02:00",
+                "0.1.27": "2024-05-15T20:38:11+02:00",
+                "0.1.28": "2024-06-25T11:34:17+01:00",
+                "0.1.30": "2024-06-25T11:37:59+01:00",
+                "0.2.0": "2024-10-15T10:32:00+02:00"
+            }
+        },
+        "@metamask-institutional/simplecache": {
+            "_id": "@metamask-institutional/simplecache",
+            "name": "@metamask-institutional/simplecache",
+            "versions": {
+                "0.1.0": {
+                    "version": "0.1.0",
+                    "name": "@metamask-institutional/simplecache",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-simplecache-0.1.0.tgz"
+                    }
+                },
+                "0.1.1": {
+                    "version": "0.1.1",
+                    "name": "@metamask-institutional/simplecache",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-simplecache-0.1.1.tgz"
+                    }
+                },
+                "0.1.2": {
+                    "version": "0.1.2",
+                    "name": "@metamask-institutional/simplecache",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-simplecache-0.1.2.tgz"
+                    }
+                },
+                "0.1.3": {
+                    "version": "0.1.3",
+                    "name": "@metamask-institutional/simplecache",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-simplecache-0.1.3.tgz"
+                    }
+                },
+                "0.1.4": {
+                    "version": "0.1.4",
+                    "name": "@metamask-institutional/simplecache",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-simplecache-0.1.4.tgz"
+                    }
+                },
+                "1.0.1": {
+                    "version": "1.0.1",
+                    "name": "@metamask-institutional/simplecache",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-simplecache-1.0.1.tgz"
+                    }
+                },
+                "1.0.0": {
+                    "version": "1.0.0",
+                    "name": "@metamask-institutional/simplecache",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-simplecache-1.0.0.tgz"
+                    }
+                },
+                "1.1.0": {
+                    "version": "1.1.0",
+                    "name": "@metamask-institutional/simplecache",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-simplecache-1.1.0.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-01-13T15:48:45Z",
+                "modified": "2023-05-25T11:33:20+01:00",
+                "0.1.0": "2023-01-13T15:48:45Z",
+                "0.1.1": "2023-01-13T15:57:37Z",
+                "0.1.2": "2023-01-16T15:01:39Z",
+                "0.1.3": "2023-01-24T10:48:22Z",
+                "0.1.4": "2023-01-27T13:06:30Z",
+                "1.0.1": "2023-02-01T15:31:48Z",
+                "1.0.0": "2023-02-01T15:12:20+01:00",
+                "1.1.0": "2023-05-25T11:33:20+01:00"
+            }
+        },
+        "@metamask-institutional/transaction-update": {
+            "_id": "@metamask-institutional/transaction-update",
+            "name": "@metamask-institutional/transaction-update",
+            "versions": {
+                "0.1.1": {
+                    "version": "0.1.1",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.1.tgz"
+                    }
+                },
+                "0.1.2": {
+                    "version": "0.1.2",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.2.tgz"
+                    }
+                },
+                "0.1.3": {
+                    "version": "0.1.3",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.3.tgz"
+                    }
+                },
+                "0.1.4": {
+                    "version": "0.1.4",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.4.tgz"
+                    }
+                },
+                "0.1.9": {
+                    "version": "0.1.9",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.9.tgz"
+                    }
+                },
+                "0.1.10": {
+                    "version": "0.1.10",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.10.tgz"
+                    }
+                },
+                "0.1.11": {
+                    "version": "0.1.11",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.11.tgz"
+                    }
+                },
+                "0.1.12": {
+                    "version": "0.1.12",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.12.tgz"
+                    }
+                },
+                "0.1.13": {
+                    "version": "0.1.13",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.13.tgz"
+                    }
+                },
+                "0.1.14": {
+                    "version": "0.1.14",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.14.tgz"
+                    }
+                },
+                "0.1.15": {
+                    "version": "0.1.15",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.15.tgz"
+                    }
+                },
+                "0.1.16": {
+                    "version": "0.1.16",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.16.tgz"
+                    }
+                },
+                "0.1.17": {
+                    "version": "0.1.17",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.17.tgz"
+                    }
+                },
+                "0.1.18": {
+                    "version": "0.1.18",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.18.tgz"
+                    }
+                },
+                "0.1.19": {
+                    "version": "0.1.19",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.19.tgz"
+                    }
+                },
+                "0.1.20": {
+                    "version": "0.1.20",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.20.tgz"
+                    }
+                },
+                "0.1.21": {
+                    "version": "0.1.21",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.21.tgz"
+                    }
+                },
+                "0.1.22": {
+                    "version": "0.1.22",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.22.tgz"
+                    }
+                },
+                "0.1.23": {
+                    "version": "0.1.23",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.23.tgz"
+                    }
+                },
+                "0.1.24": {
+                    "version": "0.1.24",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.24.tgz"
+                    }
+                },
+                "0.1.25": {
+                    "version": "0.1.25",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.25.tgz"
+                    }
+                },
+                "0.1.26": {
+                    "version": "0.1.26",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.26.tgz"
+                    }
+                },
+                "0.1.27": {
+                    "version": "0.1.27",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.27.tgz"
+                    }
+                },
+                "0.1.28": {
+                    "version": "0.1.28",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.28.tgz"
+                    }
+                },
+                "0.1.29": {
+                    "version": "0.1.29",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.29.tgz"
+                    }
+                },
+                "0.1.30": {
+                    "version": "0.1.30",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.30.tgz"
+                    }
+                },
+                "0.1.31": {
+                    "version": "0.1.31",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.31.tgz"
+                    }
+                },
+                "0.1.32": {
+                    "version": "0.1.32",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.32.tgz"
+                    }
+                },
+                "0.1.33": {
+                    "version": "0.1.33",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.33.tgz"
+                    }
+                },
+                "0.1.34": {
+                    "version": "0.1.34",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.34.tgz"
+                    }
+                },
+                "0.1.35": {
+                    "version": "0.1.35",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.35.tgz"
+                    }
+                },
+                "0.1.36": {
+                    "version": "0.1.36",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.36.tgz"
+                    }
+                },
+                "0.1.37": {
+                    "version": "0.1.37",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.37.tgz"
+                    }
+                },
+                "0.1.38": {
+                    "version": "0.1.38",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.38.tgz"
+                    }
+                },
+                "0.1.5": {
+                    "version": "0.1.5",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.5.tgz"
+                    }
+                },
+                "0.1.6": {
+                    "version": "0.1.6",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.6.tgz"
+                    }
+                },
+                "0.1.7": {
+                    "version": "0.1.7",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.7.tgz"
+                    }
+                },
+                "0.1.8": {
+                    "version": "0.1.8",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.1.8.tgz"
+                    }
+                },
+                "0.2.0": {
+                    "version": "0.2.0",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.2.0.tgz"
+                    }
+                },
+                "0.2.1": {
+                    "version": "0.2.1",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.2.1.tgz"
+                    }
+                },
+                "0.2.2": {
+                    "version": "0.2.2",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.2.2.tgz"
+                    }
+                },
+                "0.2.3": {
+                    "version": "0.2.3",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.2.3.tgz"
+                    }
+                },
+                "0.2.4": {
+                    "version": "0.2.4",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.2.4.tgz"
+                    }
+                },
+                "0.2.5": {
+                    "version": "0.2.5",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.2.5.tgz"
+                    }
+                },
+                "0.2.6": {
+                    "version": "0.2.6",
+                    "name": "@metamask-institutional/transaction-update",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-transaction-update-0.2.6.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-01-27T13:06:30Z",
+                "modified": "2024-10-15T10:32:00+02:00",
+                "0.1.1": "2023-01-27T13:06:30Z",
+                "0.1.2": "2023-01-31T13:13:09Z",
+                "0.1.3": "2023-02-01T10:36:56+01:00",
+                "0.1.4": "2023-02-01T15:31:48Z",
+                "0.1.9": "2023-02-02T12:06:22Z",
+                "0.1.10": "2023-02-02T13:26:40+01:00",
+                "0.1.11": "2023-02-02T15:26:13Z",
+                "0.1.12": "2023-02-07T13:35:11+01:00",
+                "0.1.13": "2023-02-15T17:33:36+01:00",
+                "0.1.14": "2023-02-17T10:30:26Z",
+                "0.1.15": "2023-02-17T14:14:46Z",
+                "0.1.16": "2023-02-17T14:28:36Z",
+                "0.1.17": "2023-03-28T12:05:03+01:00",
+                "0.1.18": "2023-04-20T13:43:31+01:00",
+                "0.1.19": "2023-05-13T12:15:23+01:00",
+                "0.1.20": "2023-05-15T13:12:58+01:00",
+                "0.1.21": "2023-05-17T13:27:23+02:00",
+                "0.1.22": "2023-05-25T11:33:20+01:00",
+                "0.1.23": "2023-06-27T16:19:31+01:00",
+                "0.1.24": "2023-07-19T17:29:42+01:00",
+                "0.1.25": "2023-08-21T14:15:05+02:00",
+                "0.1.26": "2023-09-18T10:57:19+01:00",
+                "0.1.27": "2023-09-18T12:25:13+01:00",
+                "0.1.28": "2023-09-21T12:07:32+01:00",
+                "0.1.29": "2023-10-03T11:44:53+01:00",
+                "0.1.30": "2023-10-12T11:40:07+01:00",
+                "0.1.31": "2023-10-20T14:43:34+01:00",
+                "0.1.32": "2023-11-07T16:40:36Z",
+                "0.1.33": "2023-11-08T17:20:09Z",
+                "0.1.34": "2024-01-23T15:47:51Z",
+                "0.1.35": "2024-02-08T15:27:01Z",
+                "0.1.36": "2024-02-13T12:20:45Z",
+                "0.1.37": "2024-04-03T16:02:03+01:00",
+                "0.1.38": "2024-04-05T14:46:46+01:00",
+                "0.1.5": "2023-02-02T11:48:26+01:00",
+                "0.1.6": "2023-02-02T12:15:27+01:00",
+                "0.1.7": "2023-02-02T12:25:59+01:00",
+                "0.1.8": "2023-02-02T13:04:53+01:00",
+                "0.2.0": "2024-04-17T14:28:58+02:00",
+                "0.2.1": "2024-05-15T20:38:11+02:00",
+                "0.2.2": "2024-05-17T10:36:08+01:00",
+                "0.2.3": "2024-05-29T13:43:40+01:00",
+                "0.2.4": "2024-06-25T11:34:17+01:00",
+                "0.2.5": "2024-06-25T11:37:59+01:00",
+                "0.2.6": "2024-10-15T10:32:00+02:00"
+            }
+        },
+        "@metamask-institutional/types": {
+            "_id": "@metamask-institutional/types",
+            "name": "@metamask-institutional/types",
+            "versions": {
+                "0.1.10": {
+                    "version": "0.1.10",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.10.tgz"
+                    }
+                },
+                "0.1.11": {
+                    "version": "0.1.11",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.11.tgz"
+                    }
+                },
+                "0.1.12": {
+                    "version": "0.1.12",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.12.tgz"
+                    }
+                },
+                "0.1.13": {
+                    "version": "0.1.13",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.13.tgz"
+                    }
+                },
+                "0.1.14": {
+                    "version": "0.1.14",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.14.tgz"
+                    }
+                },
+                "0.1.15": {
+                    "version": "0.1.15",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.15.tgz"
+                    }
+                },
+                "0.1.16": {
+                    "version": "0.1.16",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.16.tgz"
+                    }
+                },
+                "0.1.17": {
+                    "version": "0.1.17",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.17.tgz"
+                    }
+                },
+                "0.1.18": {
+                    "version": "0.1.18",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.18.tgz"
+                    }
+                },
+                "0.1.19": {
+                    "version": "0.1.19",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.19.tgz"
+                    }
+                },
+                "0.1.20": {
+                    "version": "0.1.20",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.20.tgz"
+                    }
+                },
+                "0.1.21": {
+                    "version": "0.1.21",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.21.tgz"
+                    }
+                },
+                "0.1.22": {
+                    "version": "0.1.22",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.22.tgz"
+                    }
+                },
+                "0.1.23": {
+                    "version": "0.1.23",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.23.tgz"
+                    }
+                },
+                "0.1.24": {
+                    "version": "0.1.24",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.24.tgz"
+                    }
+                },
+                "0.1.25": {
+                    "version": "0.1.25",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.25.tgz"
+                    }
+                },
+                "0.1.26": {
+                    "version": "0.1.26",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.26.tgz"
+                    }
+                },
+                "0.1.27": {
+                    "version": "0.1.27",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.27.tgz"
+                    }
+                },
+                "0.1.28": {
+                    "version": "0.1.28",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.28.tgz"
+                    }
+                },
+                "0.1.29": {
+                    "version": "0.1.29",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.29.tgz"
+                    }
+                },
+                "0.1.4": {
+                    "version": "0.1.4",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.4.tgz"
+                    }
+                },
+                "0.1.5": {
+                    "version": "0.1.5",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.5.tgz"
+                    }
+                },
+                "0.1.6": {
+                    "version": "0.1.6",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.6.tgz"
+                    }
+                },
+                "0.1.7": {
+                    "version": "0.1.7",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.7.tgz"
+                    }
+                },
+                "0.1.8": {
+                    "version": "0.1.8",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.8.tgz"
+                    }
+                },
+                "0.1.9": {
+                    "version": "0.1.9",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-0.1.9.tgz"
+                    }
+                },
+                "1.0.1": {
+                    "version": "1.0.1",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-1.0.1.tgz"
+                    }
+                },
+                "1.0.0": {
+                    "version": "1.0.0",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-1.0.0.tgz"
+                    }
+                },
+                "1.0.3": {
+                    "version": "1.0.3",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-1.0.3.tgz"
+                    }
+                },
+                "1.0.4": {
+                    "version": "1.0.4",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-1.0.4.tgz"
+                    }
+                },
+                "1.1.0": {
+                    "version": "1.1.0",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-1.1.0.tgz"
+                    }
+                },
+                "1.2.0": {
+                    "version": "1.2.0",
+                    "name": "@metamask-institutional/types",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-types-1.2.0.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-01-12T08:14:33Z",
+                "modified": "2024-10-15T10:32:00+02:00",
+                "0.1.10": "2023-01-12T08:14:33Z",
+                "0.1.11": "2023-01-12T08:33:08Z",
+                "0.1.12": "2023-01-12T08:54:59Z",
+                "0.1.13": "2023-01-12T08:59:51Z",
+                "0.1.14": "2023-01-12T09:18:14Z",
+                "0.1.15": "2023-01-12T10:10:53Z",
+                "0.1.16": "2023-01-12T13:32:54Z",
+                "0.1.17": "2023-01-12T15:21:54+01:00",
+                "0.1.18": "2023-01-12T15:27:02+01:00",
+                "0.1.19": "2023-01-13T15:33:44Z",
+                "0.1.20": "2023-01-13T15:57:37Z",
+                "0.1.21": "2023-01-16T15:15:49Z",
+                "0.1.22": "2023-01-17T08:45:32Z",
+                "0.1.23": "2023-01-17T14:52:24Z",
+                "0.1.24": "2023-01-18T15:29:47Z",
+                "0.1.25": "2023-01-20T12:53:57Z",
+                "0.1.26": "2023-01-20T16:48:50Z",
+                "0.1.27": "2023-01-24T10:48:22Z",
+                "0.1.28": "2023-01-26T10:02:52Z",
+                "0.1.29": "2023-02-01T10:36:56+01:00",
+                "0.1.4": "2023-01-05T12:20:37+01:00",
+                "0.1.5": "2023-01-05T12:28:34+01:00",
+                "0.1.6": "2023-01-09T12:50:25+01:00",
+                "0.1.7": "2023-01-10T11:13:10Z",
+                "0.1.8": "2023-01-11T17:21:20Z",
+                "0.1.9": "2023-01-12T08:04:18Z",
+                "1.0.1": "2023-02-01T15:31:48Z",
+                "1.0.0": "2023-02-01T15:12:20+01:00",
+                "1.0.3": "2023-05-25T11:33:20+01:00",
+                "1.0.4": "2023-11-07T16:40:36Z",
+                "1.1.0": "2024-04-17T14:28:58+02:00",
+                "1.2.0": "2024-10-15T10:32:00+02:00"
+            }
+        },
+        "@metamask-institutional/websocket-client": {
+            "_id": "@metamask-institutional/websocket-client",
+            "name": "@metamask-institutional/websocket-client",
+            "versions": {
+                "0.1.1": {
+                    "version": "0.1.1",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.1.tgz"
+                    }
+                },
+                "0.1.12": {
+                    "version": "0.1.12",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.12.tgz"
+                    }
+                },
+                "0.1.2": {
+                    "version": "0.1.2",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.2.tgz"
+                    }
+                },
+                "0.1.3": {
+                    "version": "0.1.3",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.3.tgz"
+                    }
+                },
+                "0.1.4": {
+                    "version": "0.1.4",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.4.tgz"
+                    }
+                },
+                "0.1.5": {
+                    "version": "0.1.5",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.5.tgz"
+                    }
+                },
+                "0.1.6": {
+                    "version": "0.1.6",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.6.tgz"
+                    }
+                },
+                "0.1.7": {
+                    "version": "0.1.7",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.7.tgz"
+                    }
+                },
+                "0.1.10": {
+                    "version": "0.1.10",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.10.tgz"
+                    }
+                },
+                "0.1.11": {
+                    "version": "0.1.11",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.11.tgz"
+                    }
+                },
+                "0.1.13": {
+                    "version": "0.1.13",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.13.tgz"
+                    }
+                },
+                "0.1.14": {
+                    "version": "0.1.14",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.14.tgz"
+                    }
+                },
+                "0.1.15": {
+                    "version": "0.1.15",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.15.tgz"
+                    }
+                },
+                "0.1.16": {
+                    "version": "0.1.16",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.16.tgz"
+                    }
+                },
+                "0.1.17": {
+                    "version": "0.1.17",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.17.tgz"
+                    }
+                },
+                "0.1.18": {
+                    "version": "0.1.18",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.18.tgz"
+                    }
+                },
+                "0.1.19": {
+                    "version": "0.1.19",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.19.tgz"
+                    }
+                },
+                "0.1.20": {
+                    "version": "0.1.20",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.20.tgz"
+                    }
+                },
+                "0.1.21": {
+                    "version": "0.1.21",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.21.tgz"
+                    }
+                },
+                "0.1.22": {
+                    "version": "0.1.22",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.22.tgz"
+                    }
+                },
+                "0.1.23": {
+                    "version": "0.1.23",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.23.tgz"
+                    }
+                },
+                "0.1.24": {
+                    "version": "0.1.24",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.24.tgz"
+                    }
+                },
+                "0.1.25": {
+                    "version": "0.1.25",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.25.tgz"
+                    }
+                },
+                "0.1.26": {
+                    "version": "0.1.26",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.26.tgz"
+                    }
+                },
+                "0.1.27": {
+                    "version": "0.1.27",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.27.tgz"
+                    }
+                },
+                "0.1.28": {
+                    "version": "0.1.28",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.28.tgz"
+                    }
+                },
+                "0.1.29": {
+                    "version": "0.1.29",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.29.tgz"
+                    }
+                },
+                "0.1.30": {
+                    "version": "0.1.30",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.30.tgz"
+                    }
+                },
+                "0.1.31": {
+                    "version": "0.1.31",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.31.tgz"
+                    }
+                },
+                "0.1.32": {
+                    "version": "0.1.32",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.32.tgz"
+                    }
+                },
+                "0.1.33": {
+                    "version": "0.1.33",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.33.tgz"
+                    }
+                },
+                "0.1.34": {
+                    "version": "0.1.34",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.34.tgz"
+                    }
+                },
+                "0.1.35": {
+                    "version": "0.1.35",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.35.tgz"
+                    }
+                },
+                "0.1.36": {
+                    "version": "0.1.36",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.36.tgz"
+                    }
+                },
+                "0.1.37": {
+                    "version": "0.1.37",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.37.tgz"
+                    }
+                },
+                "0.1.38": {
+                    "version": "0.1.38",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.38.tgz"
+                    }
+                },
+                "0.1.39": {
+                    "version": "0.1.39",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.39.tgz"
+                    }
+                },
+                "0.1.40": {
+                    "version": "0.1.40",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.40.tgz"
+                    }
+                },
+                "0.1.8": {
+                    "version": "0.1.8",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.8.tgz"
+                    }
+                },
+                "0.1.9": {
+                    "version": "0.1.9",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.1.9.tgz"
+                    }
+                },
+                "0.2.0": {
+                    "version": "0.2.0",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.2.0.tgz"
+                    }
+                },
+                "0.2.1": {
+                    "version": "0.2.1",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.2.1.tgz"
+                    }
+                },
+                "0.2.2": {
+                    "version": "0.2.2",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.2.2.tgz"
+                    }
+                },
+                "0.2.3": {
+                    "version": "0.2.3",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.2.3.tgz"
+                    }
+                },
+                "0.2.4": {
+                    "version": "0.2.4",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.2.4.tgz"
+                    }
+                },
+                "0.2.5": {
+                    "version": "0.2.5",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.2.5.tgz"
+                    }
+                },
+                "0.2.6": {
+                    "version": "0.2.6",
+                    "name": "@metamask-institutional/websocket-client",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-websocket-client-0.2.6.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-01-25T10:34:34Z",
+                "modified": "2024-10-15T10:32:00+02:00",
+                "0.1.1": "2023-01-25T10:34:34Z",
+                "0.1.12": "2023-02-02T12:06:22Z",
+                "0.1.2": "2023-01-25T10:54:30Z",
+                "0.1.3": "2023-01-26T10:02:52Z",
+                "0.1.4": "2023-01-27T13:06:30Z",
+                "0.1.5": "2023-01-31T13:13:09Z",
+                "0.1.6": "2023-02-01T10:36:56+01:00",
+                "0.1.7": "2023-02-01T15:31:48Z",
+                "0.1.10": "2023-02-02T12:25:59+01:00",
+                "0.1.11": "2023-02-02T13:04:53+01:00",
+                "0.1.13": "2023-02-02T13:26:40+01:00",
+                "0.1.14": "2023-02-02T15:26:13Z",
+                "0.1.15": "2023-02-07T13:35:11+01:00",
+                "0.1.16": "2023-02-15T17:33:36+01:00",
+                "0.1.17": "2023-02-17T10:30:26Z",
+                "0.1.18": "2023-02-17T14:28:36Z",
+                "0.1.19": "2023-03-28T12:05:03+01:00",
+                "0.1.20": "2023-04-20T13:43:31+01:00",
+                "0.1.21": "2023-05-13T12:15:23+01:00",
+                "0.1.22": "2023-05-15T13:12:58+01:00",
+                "0.1.23": "2023-05-17T13:27:23+02:00",
+                "0.1.24": "2023-05-25T11:33:20+01:00",
+                "0.1.25": "2023-06-27T16:19:31+01:00",
+                "0.1.26": "2023-07-19T17:29:42+01:00",
+                "0.1.27": "2023-08-21T14:15:05+02:00",
+                "0.1.28": "2023-09-18T10:57:19+01:00",
+                "0.1.29": "2023-09-18T12:25:13+01:00",
+                "0.1.30": "2023-09-21T12:07:32+01:00",
+                "0.1.31": "2023-10-03T11:44:53+01:00",
+                "0.1.32": "2023-10-12T11:40:07+01:00",
+                "0.1.33": "2023-10-20T14:43:34+01:00",
+                "0.1.34": "2023-11-07T16:40:36Z",
+                "0.1.35": "2023-11-08T17:20:09Z",
+                "0.1.36": "2024-01-23T15:47:51Z",
+                "0.1.37": "2024-02-08T15:27:01Z",
+                "0.1.38": "2024-02-13T12:20:45Z",
+                "0.1.39": "2024-04-03T16:02:03+01:00",
+                "0.1.40": "2024-04-05T14:46:46+01:00",
+                "0.1.8": "2023-02-02T11:48:26+01:00",
+                "0.1.9": "2023-02-02T12:15:27+01:00",
+                "0.2.0": "2024-04-17T14:28:58+02:00",
+                "0.2.1": "2024-05-15T20:38:11+02:00",
+                "0.2.2": "2024-05-17T10:36:08+01:00",
+                "0.2.3": "2024-05-29T13:43:40+01:00",
+                "0.2.4": "2024-06-25T11:34:17+01:00",
+                "0.2.5": "2024-06-25T11:37:59+01:00",
+                "0.2.6": "2024-10-15T10:32:00+02:00"
+            }
+        },
+        "@metamask-institutional/extension": {
+            "_id": "@metamask-institutional/extension",
+            "name": "@metamask-institutional/extension",
+            "versions": {
+                "0.1.4": {
+                    "version": "0.1.4",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.1.4.tgz"
+                    }
+                },
+                "0.1.5": {
+                    "version": "0.1.5",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.1.5.tgz"
+                    }
+                },
+                "0.1.6": {
+                    "version": "0.1.6",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.1.6.tgz"
+                    }
+                },
+                "0.2.1": {
+                    "version": "0.2.1",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.2.1.tgz"
+                    }
+                },
+                "0.3.0": {
+                    "version": "0.3.0",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.0.tgz"
+                    }
+                },
+                "0.3.1": {
+                    "version": "0.3.1",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.1.tgz"
+                    }
+                },
+                "0.3.10": {
+                    "version": "0.3.10",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.10.tgz"
+                    }
+                },
+                "0.3.11": {
+                    "version": "0.3.11",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.11.tgz"
+                    }
+                },
+                "0.3.12": {
+                    "version": "0.3.12",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.12.tgz"
+                    }
+                },
+                "0.3.13": {
+                    "version": "0.3.13",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.13.tgz"
+                    }
+                },
+                "0.3.14": {
+                    "version": "0.3.14",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.14.tgz"
+                    }
+                },
+                "0.3.15": {
+                    "version": "0.3.15",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.15.tgz"
+                    }
+                },
+                "0.3.16": {
+                    "version": "0.3.16",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.16.tgz"
+                    }
+                },
+                "0.3.17": {
+                    "version": "0.3.17",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.17.tgz"
+                    }
+                },
+                "0.3.18": {
+                    "version": "0.3.18",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.18.tgz"
+                    }
+                },
+                "0.3.19": {
+                    "version": "0.3.19",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.19.tgz"
+                    }
+                },
+                "0.3.2": {
+                    "version": "0.3.2",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.2.tgz"
+                    }
+                },
+                "0.3.20": {
+                    "version": "0.3.20",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.20.tgz"
+                    }
+                },
+                "0.3.21": {
+                    "version": "0.3.21",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.21.tgz"
+                    }
+                },
+                "0.3.22": {
+                    "version": "0.3.22",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.22.tgz"
+                    }
+                },
+                "0.3.23": {
+                    "version": "0.3.23",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.23.tgz"
+                    }
+                },
+                "0.3.24": {
+                    "version": "0.3.24",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.24.tgz"
+                    }
+                },
+                "0.3.25": {
+                    "version": "0.3.25",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.25.tgz"
+                    }
+                },
+                "0.3.26": {
+                    "version": "0.3.26",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.26.tgz"
+                    }
+                },
+                "0.3.27": {
+                    "version": "0.3.27",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.27.tgz"
+                    }
+                },
+                "0.3.28": {
+                    "version": "0.3.28",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.28.tgz"
+                    }
+                },
+                "0.3.3": {
+                    "version": "0.3.3",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.3.tgz"
+                    }
+                },
+                "0.3.4": {
+                    "version": "0.3.4",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.4.tgz"
+                    }
+                },
+                "0.3.5": {
+                    "version": "0.3.5",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.5.tgz"
+                    }
+                },
+                "0.3.6": {
+                    "version": "0.3.6",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.6.tgz"
+                    }
+                },
+                "0.3.7": {
+                    "version": "0.3.7",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.7.tgz"
+                    }
+                },
+                "0.3.8": {
+                    "version": "0.3.8",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.8.tgz"
+                    }
+                },
+                "0.3.9": {
+                    "version": "0.3.9",
+                    "name": "@metamask-institutional/extension",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-extension-0.3.9.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-05-25T11:33:20+01:00",
+                "modified": "2024-10-15T10:32:00+02:00",
+                "0.1.4": "2023-05-25T11:33:20+01:00",
+                "0.1.5": "2023-06-05T14:46:45+01:00",
+                "0.1.6": "2023-06-27T16:19:31+01:00",
+                "0.2.1": "2023-07-18T17:52:42+01:00",
+                "0.3.0": "2023-07-19T18:15:53+02:00",
+                "0.3.1": "2023-07-19T17:29:42+01:00",
+                "0.3.10": "2023-11-07T16:40:36Z",
+                "0.3.11": "2023-11-08T17:20:09Z",
+                "0.3.12": "2023-11-22T13:09:49Z",
+                "0.3.13": "2024-01-23T15:47:51Z",
+                "0.3.14": "2024-02-08T15:27:01Z",
+                "0.3.15": "2024-02-13T12:20:45Z",
+                "0.3.16": "2024-02-20T16:00:15+01:00",
+                "0.3.17": "2024-03-19T17:38:12Z",
+                "0.3.18": "2024-03-20T15:35:51Z",
+                "0.3.19": "2024-04-03T16:02:03+01:00",
+                "0.3.2": "2023-08-16T11:23:46+02:00",
+                "0.3.20": "2024-04-05T14:46:46+01:00",
+                "0.3.21": "2024-04-17T14:28:58+02:00",
+                "0.3.22": "2024-05-06T15:52:49+01:00",
+                "0.3.23": "2024-05-15T20:38:11+02:00",
+                "0.3.24": "2024-05-17T10:36:08+01:00",
+                "0.3.25": "2024-05-29T13:43:40+01:00",
+                "0.3.26": "2024-06-25T11:34:17+01:00",
+                "0.3.27": "2024-06-25T11:37:59+01:00",
+                "0.3.28": "2024-10-15T10:32:00+02:00",
+                "0.3.3": "2023-08-21T14:15:05+02:00",
+                "0.3.4": "2023-09-18T10:57:19+01:00",
+                "0.3.5": "2023-09-18T12:25:13+01:00",
+                "0.3.6": "2023-09-21T12:07:32+01:00",
+                "0.3.7": "2023-10-03T11:44:53+01:00",
+                "0.3.8": "2023-10-12T11:40:07+01:00",
+                "0.3.9": "2023-10-20T14:43:34+01:00"
+            }
+        },
+        "@metamask-institutional/mmi-controller": {
+            "_id": "@metamask-institutional/mmi-controller",
+            "name": "@metamask-institutional/mmi-controller",
+            "versions": {
+                "0.1.1": {
+                    "version": "0.1.1",
+                    "name": "@metamask-institutional/mmi-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-mmi-controller-0.1.1.tgz"
+                    }
+                },
+                "0.1.2": {
+                    "version": "0.1.2",
+                    "name": "@metamask-institutional/mmi-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-mmi-controller-0.1.2.tgz"
+                    }
+                },
+                "0.2.0": {
+                    "version": "0.2.0",
+                    "name": "@metamask-institutional/mmi-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-mmi-controller-0.2.0.tgz"
+                    }
+                },
+                "0.2.1": {
+                    "version": "0.2.1",
+                    "name": "@metamask-institutional/mmi-controller",
+                    "dist": {
+                        "tarball": "http://localhost:3000/local/metamask/metamask-institutional-mmi-controller-0.2.1.tgz"
+                    }
+                }
+            },
+            "time": {
+                "created": "2023-06-27T16:28:42+01:00",
+                "modified": "2023-07-19T18:15:53+02:00",
+                "0.1.1": "2023-06-27T16:28:42+01:00",
+                "0.1.2": "2023-07-18T17:52:42+01:00",
+                "0.2.0": "2023-07-19T18:15:53+02:00",
+                "0.2.1": "2023-07-19T17:29:42+01:00"
+            }
+        }
+    }
+}
