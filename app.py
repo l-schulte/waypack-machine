@@ -10,9 +10,7 @@ from routes.proxy import create_proxy_blueprint
 from routes.local import create_local_blueprint
 
 
-def _log_startup(
-    logger: logging.Logger, npm: str, yarn: str, pip: str, config: ConfigStore
-) -> None:
+def _log_startup(logger: logging.Logger, npm: str, yarn: str, pip: str, config: ConfigStore) -> None:
     logger.info("Registries:  npm=%s  yarn=%s  pip=%s", npm, yarn, pip)
 
     if not config.is_loaded:
