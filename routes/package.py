@@ -1,7 +1,7 @@
 import logging
 import os
-import requests
-from flask import Blueprint, redirect, send_from_directory
+import json
+from flask import Blueprint, redirect, send_from_directory, stream_with_context, Response
 from registries import RegistryAPI
 from config import ConfigStore
 
@@ -47,7 +47,7 @@ def create_package_blueprint(
         try:
             timestamp = int(timestamp)
         except ValueError:
-            return "Invalid timestamp format", 400
+            return "Invalid timestamp", 400
 
         package_response = api.fetch_package_metadata(subpath)
         if package_response.status_code != 200:
@@ -58,6 +58,14 @@ def create_package_blueprint(
             )
 
         filtered_data = api.filter_versions_by_timestamp(package_response.json(), timestamp)
-        return filtered_data, 200, {"Content-Type": api.content_type}
+
+        def generate():
+            yield json.dumps(filtered_data)
+
+        return Response(
+            stream_with_context(generate()),
+            status=200,
+            content_type=api.content_type,
+        )
 
     return bp
